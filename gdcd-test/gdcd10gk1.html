@@ -1,0 +1,660 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Listening Quiz</title>
+<style>
+.center {text-align: center;color:blue;}
+h2 {text-align: center;}
+.btn {background:green;color:yellow;height:40px;width:200px;margin:auto;display:block;}
+.tieude {background:lightgreen;}
+p {font-size: 14pt;}
+.bdy {background:#f7e6cd;}
+.f-grid {display: flex;justify-content: space-between;margin-left: 0rem;flex-flow: row wrap;}
+.f-grid-col {flex: 3 0;background-color: rgba(184,245,114,0.883);margin-left: 1rem;margin-bottom: 1rem;padding: 1rem;}
+</style>
+<script>var chtlroi='';var ndluu='';</script>
+</head>
+<body class="bdy">
+<form name="myform">
+<div class="tieude">
+<hr>
+
+<h2> Ôn GDCD Lớp 10 Giữa HK1</h2>
+<br>
+</div>
+<hr>
+<p id="Q-1" onclick="readhoitl(cau='c1')">
+<span style="color:blue">Câu 1:  </span> Toàn bộ những quan điểm, niềm tin định hướng hoạt động của con người trong cuộc sống là nội dung khái niệm nào sau đây?</p>
+<div class="f-grid" id="c1" onchange="getSelectValue(cau='c1')">
+<div class="f-grid-col" ><input id="c1inp1" type="radio" name="question_1" value="A.";><span id="c1A.">a)  Học thuyết.</span></div>
+<div class="f-grid-col" ><input id="c1inp2" type="radio" name="question_1" value="B._";><span id="c1B._">b)  Thế giới quan.</span></div>
+<div class="f-grid-col" ><input id="c1inp3" type="radio" name="question_1" value="C.";><span id="c1C.">c)  Phương pháp luận.</span></div>
+<div class="f-grid-col" ><input id="c1inp4" type="radio" name="question_1" value="D.";><span id="c1D.">d)  Nhân sinh quan.</span></div>
+</div>
+<p class="center" id="ans1"></p>
+<hr>
+<p id="Q-2" onclick="readhoitl(cau='c2')">
+<span style="color:blue">Câu 2:  </span> Câu ca dao, tục ngữ nào sau đây thể hiện yếu tố biện chứng?</p>
+<div class="f-grid" id="c2" onchange="getSelectValue(cau='c2')">
+<div class="f-grid-col" ><input id="c2inp1" type="radio" name="question_2" value="A.";><span id="c2A.">a)  Thầy bói xem voi.</span></div>
+<div class="f-grid-col" ><input id="c2inp2" type="radio" name="question_2" value="B.";><span id="c2B.">b)  Đèn nhà ai, nhà ấy rạng.</span></div>
+<div class="f-grid-col" ><input id="c2inp3" type="radio" name="question_2" value="C.";><span id="c2C.">c)  Việc của ai, người ấy làm, chẳng có ai liên quan đến ai cả.</span></div>
+<div class="f-grid-col" ><input id="c2inp4" type="radio" name="question_2" value="D._";><span id="c2D._">d)  Chuồn chuồn bay thấp thì mưa, bay cao thì nắng, bay vừa thì râm.</span></div>
+</div>
+<p class="center" id="ans2"></p>
+<hr>
+<p id="Q-3" onclick="readhoitl(cau='c3')">
+<span style="color:blue">Câu 3:  </span> Căn cứ vào đâu để phân biệt thế giới quan duy vật và thế giới quan duy tâm?</p>
+<div class="f-grid" id="c3" onchange="getSelectValue(cau='c3')">
+<div class="f-grid-col" ><input id="c3inp1" type="radio" name="question_3" value="A.";><span id="c3A.">a)  Khả năng nhận thức thế giới của con người.</span></div>
+<div class="f-grid-col" ><input id="c3inp2" type="radio" name="question_3" value="B.";><span id="c3B.">b)  Nguồn gốc con người.</span></div>
+<div class="f-grid-col" ><input id="c3inp3" type="radio" name="question_3" value="C.";><span id="c3C.">c)  Sự coi trọng vật chất hay ý thức.</span></div>
+<div class="f-grid-col" ><input id="c3inp4" type="radio" name="question_3" value="D._";><span id="c3D._">d)  Mối quan hệ giữa vật chất và ý thức.</span></div>
+</div>
+<p class="center" id="ans3"></p>
+<hr>
+<p id="Q-4" onclick="readhoitl(cau='c4')">
+<span style="color:blue">Câu 4:  </span> Quan điểm nào dưới đây không phải là biểu hiện của thế giới quan duy tâm?</p>
+<div class="f-grid" id="c4" onchange="getSelectValue(cau='c4')">
+<div class="f-grid-col" ><input id="c4inp1" type="radio" name="question_4" value="A.";><span id="c4A.">a)  Chữa bệnh bằng bùa phép.</span></div>
+<div class="f-grid-col" ><input id="c4inp2" type="radio" name="question_4" value="B.";><span id="c4B.">b)  Mời thầy cúng về đuối ma.</span></div>
+<div class="f-grid-col" ><input id="c4inp3" type="radio" name="question_4" value="C.";><span id="c4C.">c)  Tin một cách mù quáng vào bói toán.</span></div>
+<div class="f-grid-col" ><input id="c4inp4" type="radio" name="question_4" value="D._";><span id="c4D._">d)  Chữa bệnh theo hướng dẫn của bác sĩ.</span></div>
+</div>
+<p class="center" id="ans4"></p>
+<hr>
+<p id="Q-5" onclick="readhoitl(cau='c5')">
+<span style="color:blue">Câu 5:  </span> Câu nói nào dưới đây thể hiện yếu tố siêu hình?</p>
+<div class="f-grid" id="c5" onchange="getSelectValue(cau='c5')">
+<div class="f-grid-col" ><input id="c5inp1" type="radio" name="question_5" value="A.";><span id="c5A.">a)  Có công mài sắt có ngày nên kim.</span></div>
+<div class="f-grid-col" ><input id="c5inp2" type="radio" name="question_5" value="B.";><span id="c5B.">b)  Có thực mới vực được đạo.</span></div>
+<div class="f-grid-col" ><input id="c5inp3" type="radio" name="question_5" value="C._";><span id="c5C._">c)  Nhìn mặt mà bắt hình dong.</span></div>
+<div class="f-grid-col" ><input id="c5inp4" type="radio" name="question_5" value="D.";><span id="c5D.">d)  Có bột mới gột nên hồ.</span></div>
+</div>
+<p class="center" id="ans5"></p>
+<hr>
+<p id="Q-6" onclick="readhoitl(cau='c6')">
+<span style="color:blue">Câu 6:  </span> Thế giới quan nào có vai trò tích cực trong việc phát triển khoa học, nâng cao vai trò của con người đối với giới tự nhiên và sự tiến bộ xã hội?</p>
+<div class="f-grid" id="c6" onchange="getSelectValue(cau='c6')">
+<div class="f-grid-col" ><input id="c6inp1" type="radio" name="question_6" value="A.";><span id="c6A.">a)  Duy tâm.</span></div>
+<div class="f-grid-col" ><input id="c6inp2" type="radio" name="question_6" value="B._";><span id="c6B._">b)  Duy vật.</span></div>
+<div class="f-grid-col" ><input id="c6inp3" type="radio" name="question_6" value="C.";><span id="c6C.">c)  Tự nhiên.</span></div>
+<div class="f-grid-col" ><input id="c6inp4" type="radio" name="question_6" value="D.";><span id="c6D.">d)  Xã hội.</span></div>
+</div>
+<p class="center" id="ans6"></p>
+<hr>
+<p id="Q-7" onclick="readhoitl(cau='c7')">
+<span style="color:blue">Câu 7:  </span> Xem xét sự vật hiện tượng trong sự ràng buộc lẫn nhau, có sự vận động và phát triển không ngừng là</p>
+<div class="f-grid" id="c7" onchange="getSelectValue(cau='c7')">
+<div class="f-grid-col" ><input id="c7inp1" type="radio" name="question_7" value="A.";><span id="c7A.">a)  thế giới quan duy tâm</span></div>
+<div class="f-grid-col" ><input id="c7inp2" type="radio" name="question_7" value="B._";><span id="c7B._">b)  thế giới quan duy vật.</span></div>
+<div class="f-grid-col" ><input id="c7inp3" type="radio" name="question_7" value="C.";><span id="c7C.">c)  phương pháp luận biện chứng.</span></div>
+<div class="f-grid-col" ><input id="c7inp4" type="radio" name="question_7" value="D.";><span id="c7D.">d)  phương pháp luận siêu hình.</span></div>
+</div>
+<p class="center" id="ans7"></p>
+<hr>
+<p id="Q-8" onclick="readhoitl(cau='c8')">
+<span style="color:blue">Câu 8:  </span> Chủ nghĩa duy vật biện chứng là sự thống nhất</p>
+<div class="f-grid" id="c8" onchange="getSelectValue(cau='c8')">
+<div class="f-grid-col" ><input id="c8inp1" type="radio" name="question_8" value="A.";><span id="c8A.">a)  chặt chẽ giữa thế giới quan duy tâm và phương pháp luận siêu hình.</span></div>
+<div class="f-grid-col" ><input id="c8inp2" type="radio" name="question_8" value="B.";><span id="c8B.">b)  chặt chẽ giữa thế giới quan duy tâm và phương pháp luận biện chứng.</span></div>
+<div class="f-grid-col" ><input id="c8inp3" type="radio" name="question_8" value="C._";><span id="c8C._">c)  hữu cơ giữa thế giới quan duy vật và phương pháp luận biện chứng.</span></div>
+<div class="f-grid-col" ><input id="c8inp4" type="radio" name="question_8" value="D.";><span id="c8D.">d)  hữu cơ giữa thế giới quan duy vật và phương pháp luận siêu hình.</span></div>
+</div>
+<p class="center" id="ans8"></p>
+<hr>
+<p id="Q-9" onclick="readhoitl(cau='c9')">
+<span style="color:blue">Câu 9:  </span> Câu nói nổi tiếng của triết gia Hê – ra – clit: “Không ai tắm hai lần trên một dòng sông” thể hiện phương pháp luận</p>
+<div class="f-grid" id="c9" onchange="getSelectValue(cau='c9')">
+<div class="f-grid-col" ><input id="c9inp1" type="radio" name="question_9" value="A.";><span id="c9A.">a)  tự nhiên</span></div>
+<div class="f-grid-col" ><input id="c9inp2" type="radio" name="question_9" value="B.";><span id="c9B.">b)  siêu hình</span></div>
+<div class="f-grid-col" ><input id="c9inp3" type="radio" name="question_9" value="C.";><span id="c9C.">c)  khoa học</span></div>
+<div class="f-grid-col" ><input id="c9inp4" type="radio" name="question_9" value="D._";><span id="c9D._">d)  biện chứng</span></div>
+</div>
+<p class="center" id="ans9"></p>
+<hr>
+<p id="Q-10" onclick="readhoitl(cau='c10')">
+<span style="color:blue">Câu 10:  </span>  Câu nào dưới đây nói về sự phát triển?</p>
+<div class="f-grid" id="c10" onchange="getSelectValue(cau='c10')">
+<div class="f-grid-col" ><input id="c10inp1" type="radio" name="question_10" value="A.";><span id="c10A.">a)  Rút dây động rừng.</span></div>
+<div class="f-grid-col" ><input id="c10inp2" type="radio" name="question_10" value="B.";><span id="c10B.">b)  Nước chảy đá mòn.</span></div>
+<div class="f-grid-col" ><input id="c10inp3" type="radio" name="question_10" value="C._";><span id="c10C._">c)  Tre già măng mọc.</span></div>
+<div class="f-grid-col" ><input id="c10inp4" type="radio" name="question_10" value="D.";><span id="c10D.">d)  Có chí thì nên.</span></div>
+</div>
+<p class="center" id="ans10"></p>
+<hr>
+<p id="Q-11" onclick="readhoitl(cau='c11')">
+<span style="color:blue">Câu 11:  </span> Xem xét sự vật, hiện tượng một cách phiến diện, chỉ thấy chúng tồn tại trong trạng thái cô lập, không vận động, không phát triển, áp dụng một cách máy móc đặc tính của sự vật này vào sự vật khác là nội dung của phương pháp luận</p>
+<div class="f-grid" id="c11" onchange="getSelectValue(cau='c11')">
+<div class="f-grid-col" ><input id="c11inp1" type="radio" name="question_11" value="A.";><span id="c11A.">a)  Biện chứng</span></div>
+<div class="f-grid-col" ><input id="c11inp2" type="radio" name="question_11" value="B.";><span id="c11B.">b)  Khoa học</span></div>
+<div class="f-grid-col" ><input id="c11inp3" type="radio" name="question_11" value="C._";><span id="c11C._">c)  Siêu hình</span></div>
+<div class="f-grid-col" ><input id="c11inp4" type="radio" name="question_11" value="D.";><span id="c11D.">d)  Cụ thể</span></div>
+</div>
+<p class="center" id="ans11"></p>
+<hr>
+<p id="Q-12" onclick="readhoitl(cau='c12')">
+<span style="color:blue">Câu 12:  </span> Thế giới vật chất tồn tại khách quan, độc lập với ý thức của con người, không do ai sáng tạo ra và không ai có thể tiêu diệt được là nội dung của khái niệm nào sau đây?</p>
+<div class="f-grid" id="c12" onchange="getSelectValue(cau='c12')">
+<div class="f-grid-col" ><input id="c12inp1" type="radio" name="question_12" value="A._";><span id="c12A._">a)  Thế giới quan duy vật.</span></div>
+<div class="f-grid-col" ><input id="c12inp2" type="radio" name="question_12" value="B.";><span id="c12B.">b)  Phương pháp luận siêu hình.</span></div>
+<div class="f-grid-col" ><input id="c12inp3" type="radio" name="question_12" value="C.";><span id="c12C.">c)  Thế giới quan duy tâm.</span></div>
+<div class="f-grid-col" ><input id="c12inp4" type="radio" name="question_12" value="D.";><span id="c12D.">d)  Phương pháp luận lạc hậu.</span></div>
+</div>
+<p class="center" id="ans12"></p>
+<hr>
+<p id="Q-13" onclick="readhoitl(cau='c13')">
+<span style="color:blue">Câu 13:  </span> Ý thức là cái có trước và là cái sản sinh ra giới tự nhiên là quan niệm của</p>
+<div class="f-grid" id="c13" onchange="getSelectValue(cau='c13')">
+<div class="f-grid-col" ><input id="c13inp1" type="radio" name="question_13" value="A.";><span id="c13A.">a)  thế giới quan duy vật.</span></div>
+<div class="f-grid-col" ><input id="c13inp2" type="radio" name="question_13" value="B._";><span id="c13B._">b)  thế giới quan duy tâm.</span></div>
+<div class="f-grid-col" ><input id="c13inp3" type="radio" name="question_13" value="C.";><span id="c13C.">c)  phương pháp luận biện chứng.</span></div>
+<div class="f-grid-col" ><input id="c13inp4" type="radio" name="question_13" value="D.";><span id="c13D.">d)  phương pháp luận siêu hình.</span></div>
+</div>
+<p class="center" id="ans13"></p>
+<hr>
+<p id="Q-14" onclick="readhoitl(cau='c14')">
+<span style="color:blue">Câu 14:  </span> Theo quan điểm của Triết học duy vật biện chứng thì quan điểm nào dưới đây là đúng?</p>
+<div class="f-grid" id="c14" onchange="getSelectValue(cau='c14')">
+<div class="f-grid-col" ><input id="c14inp1" type="radio" name="question_14" value="A.";><span id="c14A.">a)  Mọi sự vận động đều là phát triển.</span></div>
+<div class="f-grid-col" ><input id="c14inp2" type="radio" name="question_14" value="B.";><span id="c14B.">b)  Vận động và phát triển không có mối quan hệ với nhau.</span></div>
+<div class="f-grid-col" ><input id="c14inp3" type="radio" name="question_14" value="C._";><span id="c14C._">c)  Không phải bất kì sự vận động nào cũng là phát triển.</span></div>
+<div class="f-grid-col" ><input id="c14inp4" type="radio" name="question_14" value="D.";><span id="c14D.">d)  Không phải sự phát triển nào cũng là vận động.</span></div>
+</div>
+<p class="center" id="ans14"></p>
+<hr>
+<p id="Q-15" onclick="readhoitl(cau='c15')">
+<span style="color:blue">Câu 15:  </span> Câu tục ngữ: “Không ai giàu ba họ, không ai khó ba đời” đề cập đến phương pháp luận nào của Triết học?</p>
+<div class="f-grid" id="c15" onchange="getSelectValue(cau='c15')">
+<div class="f-grid-col" ><input id="c15inp1" type="radio" name="question_15" value="A.";><span id="c15A.">a)  Duy tâm.</span></div>
+<div class="f-grid-col" ><input id="c15inp2" type="radio" name="question_15" value="B.";><span id="c15B.">b)  Duy vật.</span></div>
+<div class="f-grid-col" ><input id="c15inp3" type="radio" name="question_15" value="C._";><span id="c15C._">c)  Biện chứng.</span></div>
+<div class="f-grid-col" ><input id="c15inp4" type="radio" name="question_15" value="D.";><span id="c15D.">d)  Siêu hình.</span></div>
+</div>
+<p class="center" id="ans15"></p>
+<hr>
+<p id="Q-16" onclick="readhoitl(cau='c16')">
+<span style="color:blue">Câu 16:  </span> Theo quan điểm của chủ nghĩa duy vật biện chứng, phát triển theo chiều hướng vận động nào dưới đây?</p>
+<div class="f-grid" id="c16" onchange="getSelectValue(cau='c16')">
+<div class="f-grid-col" ><input id="c16inp1" type="radio" name="question_16" value="A.";><span id="c16A.">a)  Ngắt quãng.</span></div>
+<div class="f-grid-col" ><input id="c16inp2" type="radio" name="question_16" value="B.";><span id="c16B.">b)  Thụt lùi.</span></div>
+<div class="f-grid-col" ><input id="c16inp3" type="radio" name="question_16" value="C.";><span id="c16C.">c)  Tuần hoàn.</span></div>
+<div class="f-grid-col" ><input id="c16inp4" type="radio" name="question_16" value="D._";><span id="c16D._">d)  Tiến lên.</span></div>
+</div>
+<p class="center" id="ans16"></p>
+<hr>
+<p id="Q-17" onclick="readhoitl(cau='c17')">
+<span style="color:blue">Câu 17:  </span>  Để sự vật hiện tượng có thể tồn tại được thì cần phải có điều kiện nào dưới đây?</p>
+<div class="f-grid" id="c17" onchange="getSelectValue(cau='c17')">
+<div class="f-grid-col" ><input id="c17inp1" type="radio" name="question_17" value="A._";><span id="c17A._">a)  Luôn luôn vận động.</span></div>
+<div class="f-grid-col" ><input id="c17inp2" type="radio" name="question_17" value="B.";><span id="c17B.">b)  Luôn luôn thay đổi.</span></div>
+<div class="f-grid-col" ><input id="c17inp3" type="radio" name="question_17" value="C.";><span id="c17C.">c)  Sự thay thế nhau.</span></div>
+<div class="f-grid-col" ><input id="c17inp4" type="radio" name="question_17" value="D.";><span id="c17D.">d)  Sự bao hàm nhau.</span></div>
+</div>
+<p class="center" id="ans17"></p>
+<hr>
+
+<input type="button" class="btn" value="Kết quả" onclick="check()">
+</form>
+<br><br><br><br>    
+<script type="text/javascript">
+function check(){
+
+var count = 0;
+var q_1=document.myform.question_1.value;
+if(q_1=="B._"){count++;}
+var q_2=document.myform.question_2.value;
+if(q_2=="D._"){count++;}
+var q_3=document.myform.question_3.value;
+if(q_3=="D._"){count++;}
+var q_4=document.myform.question_4.value;
+if(q_4=="D._"){count++;}
+var q_5=document.myform.question_5.value;
+if(q_5=="C._"){count++;}
+var q_6=document.myform.question_6.value;
+if(q_6=="B._"){count++;}
+var q_7=document.myform.question_7.value;
+if(q_7=="B._"){count++;}
+var q_8=document.myform.question_8.value;
+if(q_8=="C._"){count++;}
+var q_9=document.myform.question_9.value;
+if(q_9=="D._"){count++;}
+var q_10=document.myform.question_10.value;
+if(q_10=="C._"){count++;}
+var q_11=document.myform.question_11.value;
+if(q_11=="C._"){count++;}
+var q_12=document.myform.question_12.value;
+if(q_12=="A._"){count++;}
+var q_13=document.myform.question_13.value;
+if(q_13=="B._"){count++;}
+var q_14=document.myform.question_14.value;
+if(q_14=="C._"){count++;}
+var q_15=document.myform.question_15.value;
+if(q_15=="C._"){count++;}
+var q_16=document.myform.question_16.value;
+if(q_16=="D._"){count++;}
+var q_17=document.myform.question_17.value;
+if(q_17=="A._"){count++;}
+var dpt=Math.round(10*count/17);
+alert("Điểm đạt :  " + String(dpt) + "/10 ");}</script>
+<script>
+function readhoitl(cau){
+switch (cau) {
+case "c1":
+var ndread=document.getElementById("Q-1").innerHTML+". ";
+if (chtlroi.indexOf("c1")<0){
+ndread=ndread+" "+document.getElementById("c1A.").innerHTML+". "+" "+document.getElementById("c1B._").innerHTML+". "+" "+document.getElementById("c1C.").innerHTML+". "+" "+document.getElementById("c1D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c1B._").innerHTML+". ";}
+say(ndread);
+break;
+case "c2":
+var ndread=document.getElementById("Q-2").innerHTML+". ";
+if (chtlroi.indexOf("c2")<0){
+ndread=ndread+" "+document.getElementById("c2A.").innerHTML+". "+" "+document.getElementById("c2B.").innerHTML+". "+" "+document.getElementById("c2C.").innerHTML+". "+" "+document.getElementById("c2D._").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c2D._").innerHTML+". ";}
+say(ndread);
+break;
+case "c3":
+var ndread=document.getElementById("Q-3").innerHTML+". ";
+if (chtlroi.indexOf("c3")<0){
+ndread=ndread+" "+document.getElementById("c3A.").innerHTML+". "+" "+document.getElementById("c3B.").innerHTML+". "+" "+document.getElementById("c3C.").innerHTML+". "+" "+document.getElementById("c3D._").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c3D._").innerHTML+". ";}
+say(ndread);
+break;
+case "c4":
+var ndread=document.getElementById("Q-4").innerHTML+". ";
+if (chtlroi.indexOf("c4")<0){
+ndread=ndread+" "+document.getElementById("c4A.").innerHTML+". "+" "+document.getElementById("c4B.").innerHTML+". "+" "+document.getElementById("c4C.").innerHTML+". "+" "+document.getElementById("c4D._").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c4D._").innerHTML+". ";}
+say(ndread);
+break;
+case "c5":
+var ndread=document.getElementById("Q-5").innerHTML+". ";
+if (chtlroi.indexOf("c5")<0){
+ndread=ndread+" "+document.getElementById("c5A.").innerHTML+". "+" "+document.getElementById("c5B.").innerHTML+". "+" "+document.getElementById("c5C._").innerHTML+". "+" "+document.getElementById("c5D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c5C._").innerHTML+". ";}
+say(ndread);
+break;
+case "c6":
+var ndread=document.getElementById("Q-6").innerHTML+". ";
+if (chtlroi.indexOf("c6")<0){
+ndread=ndread+" "+document.getElementById("c6A.").innerHTML+". "+" "+document.getElementById("c6B._").innerHTML+". "+" "+document.getElementById("c6C.").innerHTML+". "+" "+document.getElementById("c6D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c6B._").innerHTML+". ";}
+say(ndread);
+break;
+case "c7":
+var ndread=document.getElementById("Q-7").innerHTML+". ";
+if (chtlroi.indexOf("c7")<0){
+ndread=ndread+" "+document.getElementById("c7A.").innerHTML+". "+" "+document.getElementById("c7B._").innerHTML+". "+" "+document.getElementById("c7C.").innerHTML+". "+" "+document.getElementById("c7D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c7B._").innerHTML+". ";}
+say(ndread);
+break;
+case "c8":
+var ndread=document.getElementById("Q-8").innerHTML+". ";
+if (chtlroi.indexOf("c8")<0){
+ndread=ndread+" "+document.getElementById("c8A.").innerHTML+". "+" "+document.getElementById("c8B.").innerHTML+". "+" "+document.getElementById("c8C._").innerHTML+". "+" "+document.getElementById("c8D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c8C._").innerHTML+". ";}
+say(ndread);
+break;
+case "c9":
+var ndread=document.getElementById("Q-9").innerHTML+". ";
+if (chtlroi.indexOf("c9")<0){
+ndread=ndread+" "+document.getElementById("c9A.").innerHTML+". "+" "+document.getElementById("c9B.").innerHTML+". "+" "+document.getElementById("c9C.").innerHTML+". "+" "+document.getElementById("c9D._").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c9D._").innerHTML+". ";}
+say(ndread);
+break;
+case "c10":
+var ndread=document.getElementById("Q-10").innerHTML+". ";
+if (chtlroi.indexOf("c10")<0){
+ndread=ndread+" "+document.getElementById("c10A.").innerHTML+". "+" "+document.getElementById("c10B.").innerHTML+". "+" "+document.getElementById("c10C._").innerHTML+". "+" "+document.getElementById("c10D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c10C._").innerHTML+". ";}
+say(ndread);
+break;
+case "c11":
+var ndread=document.getElementById("Q-11").innerHTML+". ";
+if (chtlroi.indexOf("c11")<0){
+ndread=ndread+" "+document.getElementById("c11A.").innerHTML+". "+" "+document.getElementById("c11B.").innerHTML+". "+" "+document.getElementById("c11C._").innerHTML+". "+" "+document.getElementById("c11D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c11C._").innerHTML+". ";}
+say(ndread);
+break;
+case "c12":
+var ndread=document.getElementById("Q-12").innerHTML+". ";
+if (chtlroi.indexOf("c12")<0){
+ndread=ndread+" "+document.getElementById("c12A._").innerHTML+". "+" "+document.getElementById("c12B.").innerHTML+". "+" "+document.getElementById("c12C.").innerHTML+". "+" "+document.getElementById("c12D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c12A._").innerHTML+". ";}
+say(ndread);
+break;
+case "c13":
+var ndread=document.getElementById("Q-13").innerHTML+". ";
+if (chtlroi.indexOf("c13")<0){
+ndread=ndread+" "+document.getElementById("c13A.").innerHTML+". "+" "+document.getElementById("c13B._").innerHTML+". "+" "+document.getElementById("c13C.").innerHTML+". "+" "+document.getElementById("c13D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c13B._").innerHTML+". ";}
+say(ndread);
+break;
+case "c14":
+var ndread=document.getElementById("Q-14").innerHTML+". ";
+if (chtlroi.indexOf("c14")<0){
+ndread=ndread+" "+document.getElementById("c14A.").innerHTML+". "+" "+document.getElementById("c14B.").innerHTML+". "+" "+document.getElementById("c14C._").innerHTML+". "+" "+document.getElementById("c14D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c14C._").innerHTML+". ";}
+say(ndread);
+break;
+case "c15":
+var ndread=document.getElementById("Q-15").innerHTML+". ";
+if (chtlroi.indexOf("c15")<0){
+ndread=ndread+" "+document.getElementById("c15A.").innerHTML+". "+" "+document.getElementById("c15B.").innerHTML+". "+" "+document.getElementById("c15C._").innerHTML+". "+" "+document.getElementById("c15D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c15C._").innerHTML+". ";}
+say(ndread);
+break;
+case "c16":
+var ndread=document.getElementById("Q-16").innerHTML+". ";
+if (chtlroi.indexOf("c16")<0){
+ndread=ndread+" "+document.getElementById("c16A.").innerHTML+". "+" "+document.getElementById("c16B.").innerHTML+". "+" "+document.getElementById("c16C.").innerHTML+". "+" "+document.getElementById("c16D._").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c16D._").innerHTML+". ";}
+say(ndread);
+break;
+case "c17":
+var ndread=document.getElementById("Q-17").innerHTML+". ";
+if (chtlroi.indexOf("c17")<0){
+ndread=ndread+" "+document.getElementById("c17A._").innerHTML+". "+" "+document.getElementById("c17B.").innerHTML+". "+" "+document.getElementById("c17C.").innerHTML+". "+" "+document.getElementById("c17D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c17A._").innerHTML+". ";}
+say(ndread);
+break;
+}}
+</script>
+<script>
+function getSelectValue(cau){
+let selectedValue;
+switch (cau) {
+case "c1":
+selectedValue=document.myform.question_1.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c1A.").style.color="red"}
+document.getElementById("c1inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B._")>=0){document.getElementById("c1B._").style.color="blue"}
+document.getElementById("c1B._").style.color = "blue";
+document.getElementById("c1inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c1C.").style.color="red"}
+document.getElementById("c1inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c1D.").style.color="red"}
+document.getElementById("c1inp4").setAttribute("disabled","disabled");
+document.getElementById('ans1').innerHTML ='Thế giới quan..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-1").innerHTML+"... Trả lời: "+document.getElementById("ans1").innerHTML);
+chtlroi=chtlroi+"c1 ";
+break;
+case "c2":
+selectedValue=document.myform.question_2.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c2A.").style.color="red"}
+document.getElementById("c2inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c2B.").style.color="red"}
+document.getElementById("c2inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c2C.").style.color="red"}
+document.getElementById("c2inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D._")>=0){document.getElementById("c2D._").style.color="blue"}
+document.getElementById("c2D._").style.color = "blue";
+document.getElementById("c2inp4").setAttribute("disabled","disabled");
+document.getElementById('ans2').innerHTML ='Chuồn chuồn bay thấp thì mưa, bay cao thì nắng, bay vừa thì râm..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-2").innerHTML+"... Trả lời: "+document.getElementById("ans2").innerHTML);
+chtlroi=chtlroi+"c2 ";
+break;
+case "c3":
+selectedValue=document.myform.question_3.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c3A.").style.color="red"}
+document.getElementById("c3inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c3B.").style.color="red"}
+document.getElementById("c3inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c3C.").style.color="red"}
+document.getElementById("c3inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D._")>=0){document.getElementById("c3D._").style.color="blue"}
+document.getElementById("c3D._").style.color = "blue";
+document.getElementById("c3inp4").setAttribute("disabled","disabled");
+document.getElementById('ans3').innerHTML ='Mối quan hệ giữa vật chất và ý thức..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-3").innerHTML+"... Trả lời: "+document.getElementById("ans3").innerHTML);
+chtlroi=chtlroi+"c3 ";
+break;
+case "c4":
+selectedValue=document.myform.question_4.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c4A.").style.color="red"}
+document.getElementById("c4inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c4B.").style.color="red"}
+document.getElementById("c4inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c4C.").style.color="red"}
+document.getElementById("c4inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D._")>=0){document.getElementById("c4D._").style.color="blue"}
+document.getElementById("c4D._").style.color = "blue";
+document.getElementById("c4inp4").setAttribute("disabled","disabled");
+document.getElementById('ans4').innerHTML ='Chữa bệnh theo hướng dẫn của bác sĩ..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-4").innerHTML+"... Trả lời: "+document.getElementById("ans4").innerHTML);
+chtlroi=chtlroi+"c4 ";
+break;
+case "c5":
+selectedValue=document.myform.question_5.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c5A.").style.color="red"}
+document.getElementById("c5inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c5B.").style.color="red"}
+document.getElementById("c5inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C._")>=0){document.getElementById("c5C._").style.color="blue"}
+document.getElementById("c5C._").style.color = "blue";
+document.getElementById("c5inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c5D.").style.color="red"}
+document.getElementById("c5inp4").setAttribute("disabled","disabled");
+document.getElementById('ans5').innerHTML ='Nhìn mặt mà bắt hình dong..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-5").innerHTML+"... Trả lời: "+document.getElementById("ans5").innerHTML);
+chtlroi=chtlroi+"c5 ";
+break;
+case "c6":
+selectedValue=document.myform.question_6.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c6A.").style.color="red"}
+document.getElementById("c6inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B._")>=0){document.getElementById("c6B._").style.color="blue"}
+document.getElementById("c6B._").style.color = "blue";
+document.getElementById("c6inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c6C.").style.color="red"}
+document.getElementById("c6inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c6D.").style.color="red"}
+document.getElementById("c6inp4").setAttribute("disabled","disabled");
+document.getElementById('ans6').innerHTML ='Duy vật..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-6").innerHTML+"... Trả lời: "+document.getElementById("ans6").innerHTML);
+chtlroi=chtlroi+"c6 ";
+break;
+case "c7":
+selectedValue=document.myform.question_7.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c7A.").style.color="red"}
+document.getElementById("c7inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B._")>=0){document.getElementById("c7B._").style.color="blue"}
+document.getElementById("c7B._").style.color = "blue";
+document.getElementById("c7inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c7C.").style.color="red"}
+document.getElementById("c7inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c7D.").style.color="red"}
+document.getElementById("c7inp4").setAttribute("disabled","disabled");
+document.getElementById('ans7').innerHTML ='thế giới quan duy vật..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-7").innerHTML+"... Trả lời: "+document.getElementById("ans7").innerHTML);
+chtlroi=chtlroi+"c7 ";
+break;
+case "c8":
+selectedValue=document.myform.question_8.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c8A.").style.color="red"}
+document.getElementById("c8inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c8B.").style.color="red"}
+document.getElementById("c8inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C._")>=0){document.getElementById("c8C._").style.color="blue"}
+document.getElementById("c8C._").style.color = "blue";
+document.getElementById("c8inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c8D.").style.color="red"}
+document.getElementById("c8inp4").setAttribute("disabled","disabled");
+document.getElementById('ans8').innerHTML ='hữu cơ giữa thế giới quan duy vật và phương pháp luận biện chứng..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-8").innerHTML+"... Trả lời: "+document.getElementById("ans8").innerHTML);
+chtlroi=chtlroi+"c8 ";
+break;
+case "c9":
+selectedValue=document.myform.question_9.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c9A.").style.color="red"}
+document.getElementById("c9inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c9B.").style.color="red"}
+document.getElementById("c9inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c9C.").style.color="red"}
+document.getElementById("c9inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D._")>=0){document.getElementById("c9D._").style.color="blue"}
+document.getElementById("c9D._").style.color = "blue";
+document.getElementById("c9inp4").setAttribute("disabled","disabled");
+document.getElementById('ans9').innerHTML ='biện chứng.'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-9").innerHTML+"... Trả lời: "+document.getElementById("ans9").innerHTML);
+chtlroi=chtlroi+"c9 ";
+break;
+case "c10":
+selectedValue=document.myform.question_10.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c10A.").style.color="red"}
+document.getElementById("c10inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c10B.").style.color="red"}
+document.getElementById("c10inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C._")>=0){document.getElementById("c10C._").style.color="blue"}
+document.getElementById("c10C._").style.color = "blue";
+document.getElementById("c10inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c10D.").style.color="red"}
+document.getElementById("c10inp4").setAttribute("disabled","disabled");
+document.getElementById('ans10').innerHTML ='Tre già măng mọc..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-10").innerHTML+"... Trả lời: "+document.getElementById("ans10").innerHTML);
+chtlroi=chtlroi+"c10 ";
+break;
+case "c11":
+selectedValue=document.myform.question_11.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c11A.").style.color="red"}
+document.getElementById("c11inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c11B.").style.color="red"}
+document.getElementById("c11inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C._")>=0){document.getElementById("c11C._").style.color="blue"}
+document.getElementById("c11C._").style.color = "blue";
+document.getElementById("c11inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c11D.").style.color="red"}
+document.getElementById("c11inp4").setAttribute("disabled","disabled");
+document.getElementById('ans11').innerHTML ='Siêu hình.'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-11").innerHTML+"... Trả lời: "+document.getElementById("ans11").innerHTML);
+chtlroi=chtlroi+"c11 ";
+break;
+case "c12":
+selectedValue=document.myform.question_12.value;
+if (selectedValue.indexOf("A._")>=0){document.getElementById("c12A._").style.color="blue"}
+document.getElementById("c12A._").style.color = "blue";
+document.getElementById("c12inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c12B.").style.color="red"}
+document.getElementById("c12inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c12C.").style.color="red"}
+document.getElementById("c12inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c12D.").style.color="red"}
+document.getElementById("c12inp4").setAttribute("disabled","disabled");
+document.getElementById('ans12').innerHTML ='Thế giới quan duy vật..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-12").innerHTML+"... Trả lời: "+document.getElementById("ans12").innerHTML);
+chtlroi=chtlroi+"c12 ";
+break;
+case "c13":
+selectedValue=document.myform.question_13.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c13A.").style.color="red"}
+document.getElementById("c13inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B._")>=0){document.getElementById("c13B._").style.color="blue"}
+document.getElementById("c13B._").style.color = "blue";
+document.getElementById("c13inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c13C.").style.color="red"}
+document.getElementById("c13inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c13D.").style.color="red"}
+document.getElementById("c13inp4").setAttribute("disabled","disabled");
+document.getElementById('ans13').innerHTML ='thế giới quan duy tâm..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-13").innerHTML+"... Trả lời: "+document.getElementById("ans13").innerHTML);
+chtlroi=chtlroi+"c13 ";
+break;
+case "c14":
+selectedValue=document.myform.question_14.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c14A.").style.color="red"}
+document.getElementById("c14inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c14B.").style.color="red"}
+document.getElementById("c14inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C._")>=0){document.getElementById("c14C._").style.color="blue"}
+document.getElementById("c14C._").style.color = "blue";
+document.getElementById("c14inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c14D.").style.color="red"}
+document.getElementById("c14inp4").setAttribute("disabled","disabled");
+document.getElementById('ans14').innerHTML ='Không phải bất kì sự vận động nào cũng là phát triển..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-14").innerHTML+"... Trả lời: "+document.getElementById("ans14").innerHTML);
+chtlroi=chtlroi+"c14 ";
+break;
+case "c15":
+selectedValue=document.myform.question_15.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c15A.").style.color="red"}
+document.getElementById("c15inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c15B.").style.color="red"}
+document.getElementById("c15inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C._")>=0){document.getElementById("c15C._").style.color="blue"}
+document.getElementById("c15C._").style.color = "blue";
+document.getElementById("c15inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c15D.").style.color="red"}
+document.getElementById("c15inp4").setAttribute("disabled","disabled");
+document.getElementById('ans15').innerHTML ='Biện chứng..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-15").innerHTML+"... Trả lời: "+document.getElementById("ans15").innerHTML);
+chtlroi=chtlroi+"c15 ";
+break;
+case "c16":
+selectedValue=document.myform.question_16.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c16A.").style.color="red"}
+document.getElementById("c16inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c16B.").style.color="red"}
+document.getElementById("c16inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c16C.").style.color="red"}
+document.getElementById("c16inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D._")>=0){document.getElementById("c16D._").style.color="blue"}
+document.getElementById("c16D._").style.color = "blue";
+document.getElementById("c16inp4").setAttribute("disabled","disabled");
+document.getElementById('ans16').innerHTML ='Tiến lên..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-16").innerHTML+"... Trả lời: "+document.getElementById("ans16").innerHTML);
+chtlroi=chtlroi+"c16 ";
+break;
+case "c17":
+selectedValue=document.myform.question_17.value;
+if (selectedValue.indexOf("A._")>=0){document.getElementById("c17A._").style.color="blue"}
+document.getElementById("c17A._").style.color = "blue";
+document.getElementById("c17inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c17B.").style.color="red"}
+document.getElementById("c17inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c17C.").style.color="red"}
+document.getElementById("c17inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c17D.").style.color="red"}
+document.getElementById("c17inp4").setAttribute("disabled","disabled");
+document.getElementById('ans17').innerHTML ='Luôn luôn vận động..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-17").innerHTML+"... Trả lời: "+document.getElementById("ans17").innerHTML);
+chtlroi=chtlroi+"c17 ";
+break;
+}}
+</script>
+
+<script>
+function say(message){
+message=message.replace('<span style="color:blue">', '');
+message=message.replace('</span>', '');
+message=message.replace('<br>', '');
+//ndluu=message; //se dung cho noi lai
+
+let speech = new SpeechSynthesisUtterance(message);
+speech.lang = "vi-VN";
+window.speechSynthesis.speak(speech);}
+</script>              
+</body>
+</html>
+
