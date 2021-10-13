@@ -1,0 +1,660 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Listening Quiz</title>
+<style>
+.center {text-align: center;color:blue;}
+h2 {text-align: center;}
+.btn {background:green;color:yellow;height:40px;width:200px;margin:auto;display:block;}
+.tieude {background:lightgreen;}
+p {font-size: 14pt;}
+.bdy {background:#f7e6cd;}
+.f-grid {display: flex;justify-content: space-between;margin-left: 0rem;flex-flow: row wrap;}
+.f-grid-col {flex: 3 0;background-color: rgba(184,245,114,0.883);margin-left: 1rem;margin-bottom: 1rem;padding: 1rem;}
+</style>
+<script>var chtlroi='';var ndluu='';</script>
+</head>
+<body class="bdy">
+<form name="myform">
+<div class="tieude">
+<hr>
+
+<h2> Ôn giữa hk1 môn GDCD 11</h2>
+<br>
+</div>
+<hr>
+<p id="Q-1" onclick="readhoitl(cau='c1')">
+<span style="color:blue">Câu 1:  </span> Lao động của con người là dạng hoạt động gì?</p>
+<div class="f-grid" id="c1" onchange="getSelectValue(cau='c1')">
+<div class="f-grid-col" ><input id="c1inp1" type="radio" name="question_1" value="A.";><span id="c1A.">a)  Hoạt động bản năng.</span></div>
+<div class="f-grid-col" ><input id="c1inp2" type="radio" name="question_1" value="B.";><span id="c1B.">b)  Hoạt động vô thức.</span></div>
+<div class="f-grid-col" ><input id="c1inp3" type="radio" name="question_1" value="C._";><span id="c1C._">c)  Hoạt động có mục đích, có ý thức.</span></div>
+<div class="f-grid-col" ><input id="c1inp4" type="radio" name="question_1" value="D.";><span id="c1D.">d)  Hoạt động để thỏa mãn nhu cầu.</span></div>
+</div>
+<p class="center" id="ans1"></p>
+<hr>
+<p id="Q-2" onclick="readhoitl(cau='c2')">
+<span style="color:blue">Câu 2:  </span> Sự tác động của con người vào tự nhiên, biến đổi các yếu tố của tự nhiên để tạo ra sản phẩm phù hợp với nhu cầu của mình gọi là gì?</p>
+<div class="f-grid" id="c2" onchange="getSelectValue(cau='c2')">
+<div class="f-grid-col" ><input id="c2inp1" type="radio" name="question_2" value="A.";><span id="c2A.">a)  Quá trình tồn tại.</span></div>
+<div class="f-grid-col" ><input id="c2inp2" type="radio" name="question_2" value="B.";><span id="c2B.">b)  Bản năng sống.</span></div>
+<div class="f-grid-col" ><input id="c2inp3" type="radio" name="question_2" value="C.";><span id="c2C.">c)  Quá trình sản xuất.</span></div>
+<div class="f-grid-col" ><input id="c2inp4" type="radio" name="question_2" value="D._";><span id="c2D._">d)  Sản xuất của cải vật chất.</span></div>
+</div>
+<p class="center" id="ans2"></p>
+<hr>
+<p id="Q-3" onclick="readhoitl(cau='c3')">
+<span style="color:blue">Câu 3:  </span> Vì sao sức lao động giữ vai trò quan trọng, quyết định nhất trong các yếu tố cơ bản của quá trình sản xuất?</p>
+<div class="f-grid" id="c3" onchange="getSelectValue(cau='c3')">
+<div class="f-grid-col" ><input id="c3inp1" type="radio" name="question_3" value="A.";><span id="c3A.">a)  Vì sức lao động chỉ có ở con người.</span></div>
+<div class="f-grid-col" ><input id="c3inp2" type="radio" name="question_3" value="B.";><span id="c3B.">b)  Vì sức lao động luôn có sẵn.</span></div>
+<div class="f-grid-col" ><input id="c3inp3" type="radio" name="question_3" value="C.";><span id="c3C.">c)  Vì sức lao động là yếu tố để phân biệt con người với con vật.</span></div>
+<div class="f-grid-col" ><input id="c3inp4" type="radio" name="question_3" value="D._";><span id="c3D._">d)  Vì sức lao động có tính sáng tạo.</span></div>
+</div>
+<p class="center" id="ans3"></p>
+<hr>
+<p id="Q-4" onclick="readhoitl(cau='c4')">
+<span style="color:blue">Câu 4:  </span> Sản xuất của cải vật chất giữ vai trò gì đối với sự tồn tại của xã hội?</p>
+<div class="f-grid" id="c4" onchange="getSelectValue(cau='c4')">
+<div class="f-grid-col" ><input id="c4inp1" type="radio" name="question_4" value="A.";><span id="c4A.">a)  Là động lực.</span></div>
+<div class="f-grid-col" ><input id="c4inp2" type="radio" name="question_4" value="B.";><span id="c4B.">b)  Là điều kiện.</span></div>
+<div class="f-grid-col" ><input id="c4inp3" type="radio" name="question_4" value="C._";><span id="c4C._">c)  Là cơ sở.</span></div>
+<div class="f-grid-col" ><input id="c4inp4" type="radio" name="question_4" value="D.";><span id="c4D.">d)  Là đòn bẩy.</span></div>
+</div>
+<p class="center" id="ans4"></p>
+<hr>
+<p id="Q-5" onclick="readhoitl(cau='c5')">
+<span style="color:blue">Câu 5:  </span> Giá trị của hàng hóa được thực hiện khi</p>
+<div class="f-grid" id="c5" onchange="getSelectValue(cau='c5')">
+<div class="f-grid-col" ><input id="c5inp1" type="radio" name="question_5" value="A.";><span id="c5A.">a)  Người sản xuất cung ứng hàng hóa phù hợp với nhu cầu của người tiêu dùng</span></div>
+<div class="f-grid-col" ><input id="c5inp2" type="radio" name="question_5" value="B.";><span id="c5B.">b)  Người sản xuất mang hàng hóa ra thị trường bán</span></div>
+<div class="f-grid-col" ><input id="c5inp3" type="radio" name="question_5" value="C._";><span id="c5C._">c)  Người sản xuất mang hàng hóa ra thị trường bán và bán được</span></div>
+<div class="f-grid-col" ><input id="c5inp4" type="radio" name="question_5" value="D.";><span id="c5D.">d)  Người sản xuất cung ứng được hàng hóa có nhiều giá trị sử dụng</span></div>
+</div>
+<p class="center" id="ans5"></p>
+<hr>
+<p id="Q-6" onclick="readhoitl(cau='c6')">
+<span style="color:blue">Câu 6:  </span> Tua du lịch  Sài Gòn  - Đà Nẵng – Huế là loại hàng hóa</p>
+<div class="f-grid" id="c6" onchange="getSelectValue(cau='c6')">
+<div class="f-grid-col" ><input id="c6inp1" type="radio" name="question_6" value="A.";><span id="c6A.">a)  không xác định.</span></div>
+<div class="f-grid-col" ><input id="c6inp2" type="radio" name="question_6" value="B.";><span id="c6B.">b)  xác định.</span></div>
+<div class="f-grid-col" ><input id="c6inp3" type="radio" name="question_6" value="C.";><span id="c6C.">c)  hữu hình.</span></div>
+<div class="f-grid-col" ><input id="c6inp4" type="radio" name="question_6" value="D._";><span id="c6D._">d)  dịch vụ.</span></div>
+</div>
+<p class="center" id="ans6"></p>
+<hr>
+<p id="Q-7" onclick="readhoitl(cau='c7')">
+<span style="color:blue">Câu 7:  </span> Chị B vừa mua chiếc áo khoác và khoe với bạn rằng áo có chất liệu bền, màu sắc đẹp phù hợp với lứa tuổi, chắc người tạo ra nó có tính thẩm mỹ cao. Vậy nhận xét của chị B về chiếc áo trên của mình đã thể hiện thuộc tính của hàng hoá nào sau đây?</p>
+<div class="f-grid" id="c7" onchange="getSelectValue(cau='c7')">
+<div class="f-grid-col" ><input id="c7inp1" type="radio" name="question_7" value="A._";><span id="c7A._">a)  Giá trị.</span></div>
+<div class="f-grid-col" ><input id="c7inp2" type="radio" name="question_7" value="B.";><span id="c7B.">b)  Giá cả.</span></div>
+<div class="f-grid-col" ><input id="c7inp3" type="radio" name="question_7" value="C.";><span id="c7C.">c)  Giá trị sử dụng.</span></div>
+<div class="f-grid-col" ><input id="c7inp4" type="radio" name="question_7" value="D.";><span id="c7D.">d)  Lượng giá trị.</span></div>
+</div>
+<p class="center" id="ans7"></p>
+<hr>
+<p id="Q-8" onclick="readhoitl(cau='c8')">
+<span style="color:blue">Câu 8:  </span> Sản xuất của cải vật chất giữ vai trò như thế nào đến mọi hoạt động của xã hội?</p>
+<div class="f-grid" id="c8" onchange="getSelectValue(cau='c8')">
+<div class="f-grid-col" ><input id="c8inp1" type="radio" name="question_8" value="A._";><span id="c8A._">a)  Quyết định.</span></div>
+<div class="f-grid-col" ><input id="c8inp2" type="radio" name="question_8" value="B.";><span id="c8B.">b)  Thúc đẩy.</span></div>
+<div class="f-grid-col" ><input id="c8inp3" type="radio" name="question_8" value="C.";><span id="c8C.">c)  Định hướng.</span></div>
+<div class="f-grid-col" ><input id="c8inp4" type="radio" name="question_8" value="D.";><span id="c8D.">d)  Quan trọng.</span></div>
+</div>
+<p class="center" id="ans8"></p>
+<hr>
+<p id="Q-9" onclick="readhoitl(cau='c9')">
+<span style="color:blue">Câu 9:  </span> Lao động xã hội của người sản xuất kết tinh trong hàng hóa được gọi là gì?</p>
+<div class="f-grid" id="c9" onchange="getSelectValue(cau='c9')">
+<div class="f-grid-col" ><input id="c9inp1" type="radio" name="question_9" value="A.";><span id="c9A.">a)  Giá trị sử dụng của hàng hóa.</span></div>
+<div class="f-grid-col" ><input id="c9inp2" type="radio" name="question_9" value="B._";><span id="c9B._">b)  Giá trị của hàng hóa.</span></div>
+<div class="f-grid-col" ><input id="c9inp3" type="radio" name="question_9" value="C.";><span id="c9C.">c)  Giá trị trao đổi của hàng hóa.</span></div>
+<div class="f-grid-col" ><input id="c9inp4" type="radio" name="question_9" value="D.";><span id="c9D.">d)  Giá trị thặng dư của hàng hóa.</span></div>
+</div>
+<p class="center" id="ans9"></p>
+<hr>
+<p id="Q-10" onclick="readhoitl(cau='c10')">
+<span style="color:blue">Câu 10:  </span> Toàn bộ năng lực thể chất và tinh thần của con người được vận dụng vào quá trình sản xuất được gọi là?</p>
+<div class="f-grid" id="c10" onchange="getSelectValue(cau='c10')">
+<div class="f-grid-col" ><input id="c10inp1" type="radio" name="question_10" value="A.";><span id="c10A.">a)  Tư liệu sản xuất.</span></div>
+<div class="f-grid-col" ><input id="c10inp2" type="radio" name="question_10" value="B.";><span id="c10B.">b)  Công cụ lao động.</span></div>
+<div class="f-grid-col" ><input id="c10inp3" type="radio" name="question_10" value="C._";><span id="c10C._">c)  Sức lao động.</span></div>
+<div class="f-grid-col" ><input id="c10inp4" type="radio" name="question_10" value="D.";><span id="c10D.">d)  Đối tượng lao động.</span></div>
+</div>
+<p class="center" id="ans10"></p>
+<hr>
+<p id="Q-11" onclick="readhoitl(cau='c11')">
+<span style="color:blue">Câu 11:  </span> Yếu tố nào sau đây giữ vai trò quan trọng và quyết định nhất của quá trình sản xuất?</p>
+<div class="f-grid" id="c11" onchange="getSelectValue(cau='c11')">
+<div class="f-grid-col" ><input id="c11inp1" type="radio" name="question_11" value="A.";><span id="c11A.">a)  Tư liệu lao động.</span></div>
+<div class="f-grid-col" ><input id="c11inp2" type="radio" name="question_11" value="B.";><span id="c11B.">b)  Đối tượng lao động.</span></div>
+<div class="f-grid-col" ><input id="c11inp3" type="radio" name="question_11" value="C._";><span id="c11C._">c)  Sức lao động.</span></div>
+<div class="f-grid-col" ><input id="c11inp4" type="radio" name="question_11" value="D.";><span id="c11D.">d)  Công cụ lao động.</span></div>
+</div>
+<p class="center" id="ans11"></p>
+<hr>
+<p id="Q-12" onclick="readhoitl(cau='c12')">
+<span style="color:blue">Câu 12:  </span> Công dụng của sản phẩm làm cho hàng hóa luôn có giá trị nào sau đây?</p>
+<div class="f-grid" id="c12" onchange="getSelectValue(cau='c12')">
+<div class="f-grid-col" ><input id="c12inp1" type="radio" name="question_12" value="A.";><span id="c12A.">a)  Thặng dư.</span></div>
+<div class="f-grid-col" ><input id="c12inp2" type="radio" name="question_12" value="B._";><span id="c12B._">b)  Sử dụng.</span></div>
+<div class="f-grid-col" ><input id="c12inp3" type="radio" name="question_12" value="C.";><span id="c12C.">c)  Cá biệt.</span></div>
+<div class="f-grid-col" ><input id="c12inp4" type="radio" name="question_12" value="D.";><span id="c12D.">d)  Xã hội.</span></div>
+</div>
+<p class="center" id="ans12"></p>
+<hr>
+<p id="Q-13" onclick="readhoitl(cau='c13')">
+<span style="color:blue">Câu 13:  </span>Trong quá trình sản xuất, cây gỗ dùng để chống lò trong khu vực hầm mỏ là yếu tố nào sau đây?</p>
+<div class="f-grid" id="c13" onchange="getSelectValue(cau='c13')">
+<div class="f-grid-col" ><input id="c13inp1" type="radio" name="question_13" value="A._";><span id="c13A._">a)  Tư liệu lao động.</span></div>
+<div class="f-grid-col" ><input id="c13inp2" type="radio" name="question_13" value="B.";><span id="c13B.">b)  Đối tượng lao động.</span></div>
+<div class="f-grid-col" ><input id="c13inp3" type="radio" name="question_13" value="C.";><span id="c13C.">c)  Đội ngũ lao động.</span></div>
+<div class="f-grid-col" ><input id="c13inp4" type="radio" name="question_13" value="D.";><span id="c13D.">d)  Khả năng lao động.</span></div>
+</div>
+<p class="center" id="ans13"></p>
+<hr>
+<p id="Q-14" onclick="readhoitl(cau='c14')">
+<span style="color:blue">Câu 14:  </span> Kết cấu hạ tầng thuộc  một trong các yếu tố nào sau đây của quá trình sản xuất?</p>
+<div class="f-grid" id="c14" onchange="getSelectValue(cau='c14')">
+<div class="f-grid-col" ><input id="c14inp1" type="radio" name="question_14" value="A.";><span id="c14A.">a)  Đối tượng sản xuất.</span></div>
+<div class="f-grid-col" ><input id="c14inp2" type="radio" name="question_14" value="B._";><span id="c14B._">b)  Tư liệu lao động.</span></div>
+<div class="f-grid-col" ><input id="c14inp3" type="radio" name="question_14" value="C.";><span id="c14C.">c)  Môi trường tự nhiên.</span></div>
+<div class="f-grid-col" ><input id="c14inp4" type="radio" name="question_14" value="D.";><span id="c14D.">d)  Đội ngũ nhân công.</span></div>
+</div>
+<p class="center" id="ans14"></p>
+<hr>
+<p id="Q-15" onclick="readhoitl(cau='c15')">
+<span style="color:blue">Câu 15:  </span> Chị A làm một chiếc áo mất hết 5 giờ. Thời gian lao động xã hội cần thiết để làm chiếc áo là 7 giờ. Vậy chị A bán chiếc áo với giá cả tương ứng với bao nhiêu giờ?</p>
+<div class="f-grid" id="c15" onchange="getSelectValue(cau='c15')">
+<div class="f-grid-col" ><input id="c15inp1" type="radio" name="question_15" value="A.";><span id="c15A.">a)  5 giờ.</span></div>
+<div class="f-grid-col" ><input id="c15inp2" type="radio" name="question_15" value="B.";><span id="c15B.">b)  6 giờ.</span></div>
+<div class="f-grid-col" ><input id="c15inp3" type="radio" name="question_15" value="C._";><span id="c15C._">c)  7 giờ.</span></div>
+<div class="f-grid-col" ><input id="c15inp4" type="radio" name="question_15" value="D.";><span id="c15D.">d)  Tùy ý.</span></div>
+</div>
+<p class="center" id="ans15"></p>
+<hr>
+<p id="Q-16" onclick="readhoitl(cau='c16')">
+<span style="color:blue">Câu 16:  </span> Thời gian lao động 5 giờ để chị A làm ra chiếc áo được gọi là gì?</p>
+<div class="f-grid" id="c16" onchange="getSelectValue(cau='c16')">
+<div class="f-grid-col" ><input id="c16inp1" type="radio" name="question_16" value="A.";><span id="c16A.">a)  Thời gian lao động xã hội.</span></div>
+<div class="f-grid-col" ><input id="c16inp2" type="radio" name="question_16" value="B.";><span id="c16B.">b)  Thời gian xã hội.</span></div>
+<div class="f-grid-col" ><input id="c16inp3" type="radio" name="question_16" value="C._";><span id="c16C._">c)  Thời gian lao động cá biệt.</span></div>
+<div class="f-grid-col" ><input id="c16inp4" type="radio" name="question_16" value="D.";><span id="c16D.">d)  Thời gian hao phí.</span></div>
+</div>
+<p class="center" id="ans16"></p>
+<hr>
+<p id="Q-17" onclick="readhoitl(cau='c17')">
+<span style="color:blue">Câu 17:  </span> Bác B nuôi được 20 con gà. Bác để ăn 3 con, cho con gái 2 con. Số còn lại bác mang bán. Hỏi số gà của bác B có bao nhiêu con gà là hàng hóa?</p>
+<div class="f-grid" id="c17" onchange="getSelectValue(cau='c17')">
+<div class="f-grid-col" ><input id="c17inp1" type="radio" name="question_17" value="A.";><span id="c17A.">a)  5 con</span></div>
+<div class="f-grid-col" ><input id="c17inp2" type="radio" name="question_17" value="B.";><span id="c17B.">b)  20 con</span></div>
+<div class="f-grid-col" ><input id="c17inp3" type="radio" name="question_17" value="C._";><span id="c17C._">c)  15 con</span></div>
+<div class="f-grid-col" ><input id="c17inp4" type="radio" name="question_17" value="D.";><span id="c17D.">d)  3 con.</span></div>
+</div>
+<p class="center" id="ans17"></p>
+<hr>
+
+<input type="button" class="btn" value="Kết quả" onclick="check()">
+</form>
+<br><br><br><br>    
+<script type="text/javascript">
+function check(){
+
+var count = 0;
+var q_1=document.myform.question_1.value;
+if(q_1=="C._"){count++;}
+var q_2=document.myform.question_2.value;
+if(q_2=="D._"){count++;}
+var q_3=document.myform.question_3.value;
+if(q_3=="D._"){count++;}
+var q_4=document.myform.question_4.value;
+if(q_4=="C._"){count++;}
+var q_5=document.myform.question_5.value;
+if(q_5=="C._"){count++;}
+var q_6=document.myform.question_6.value;
+if(q_6=="D._"){count++;}
+var q_7=document.myform.question_7.value;
+if(q_7=="A._"){count++;}
+var q_8=document.myform.question_8.value;
+if(q_8=="A._"){count++;}
+var q_9=document.myform.question_9.value;
+if(q_9=="B._"){count++;}
+var q_10=document.myform.question_10.value;
+if(q_10=="C._"){count++;}
+var q_11=document.myform.question_11.value;
+if(q_11=="C._"){count++;}
+var q_12=document.myform.question_12.value;
+if(q_12=="B._"){count++;}
+var q_13=document.myform.question_13.value;
+if(q_13=="A._"){count++;}
+var q_14=document.myform.question_14.value;
+if(q_14=="B._"){count++;}
+var q_15=document.myform.question_15.value;
+if(q_15=="C._"){count++;}
+var q_16=document.myform.question_16.value;
+if(q_16=="C._"){count++;}
+var q_17=document.myform.question_17.value;
+if(q_17=="C._"){count++;}
+var dpt=Math.round(10*count/17);
+alert("Điểm đạt :  " + String(dpt) + "/10 ");}</script>
+<script>
+function readhoitl(cau){
+switch (cau) {
+case "c1":
+var ndread=document.getElementById("Q-1").innerHTML+". ";
+if (chtlroi.indexOf("c1")<0){
+ndread=ndread+" "+document.getElementById("c1A.").innerHTML+". "+" "+document.getElementById("c1B.").innerHTML+". "+" "+document.getElementById("c1C._").innerHTML+". "+" "+document.getElementById("c1D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c1C._").innerHTML+". ";}
+say(ndread);
+break;
+case "c2":
+var ndread=document.getElementById("Q-2").innerHTML+". ";
+if (chtlroi.indexOf("c2")<0){
+ndread=ndread+" "+document.getElementById("c2A.").innerHTML+". "+" "+document.getElementById("c2B.").innerHTML+". "+" "+document.getElementById("c2C.").innerHTML+". "+" "+document.getElementById("c2D._").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c2D._").innerHTML+". ";}
+say(ndread);
+break;
+case "c3":
+var ndread=document.getElementById("Q-3").innerHTML+". ";
+if (chtlroi.indexOf("c3")<0){
+ndread=ndread+" "+document.getElementById("c3A.").innerHTML+". "+" "+document.getElementById("c3B.").innerHTML+". "+" "+document.getElementById("c3C.").innerHTML+". "+" "+document.getElementById("c3D._").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c3D._").innerHTML+". ";}
+say(ndread);
+break;
+case "c4":
+var ndread=document.getElementById("Q-4").innerHTML+". ";
+if (chtlroi.indexOf("c4")<0){
+ndread=ndread+" "+document.getElementById("c4A.").innerHTML+". "+" "+document.getElementById("c4B.").innerHTML+". "+" "+document.getElementById("c4C._").innerHTML+". "+" "+document.getElementById("c4D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c4C._").innerHTML+". ";}
+say(ndread);
+break;
+case "c5":
+var ndread=document.getElementById("Q-5").innerHTML+". ";
+if (chtlroi.indexOf("c5")<0){
+ndread=ndread+" "+document.getElementById("c5A.").innerHTML+". "+" "+document.getElementById("c5B.").innerHTML+". "+" "+document.getElementById("c5C._").innerHTML+". "+" "+document.getElementById("c5D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c5C._").innerHTML+". ";}
+say(ndread);
+break;
+case "c6":
+var ndread=document.getElementById("Q-6").innerHTML+". ";
+if (chtlroi.indexOf("c6")<0){
+ndread=ndread+" "+document.getElementById("c6A.").innerHTML+". "+" "+document.getElementById("c6B.").innerHTML+". "+" "+document.getElementById("c6C.").innerHTML+". "+" "+document.getElementById("c6D._").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c6D._").innerHTML+". ";}
+say(ndread);
+break;
+case "c7":
+var ndread=document.getElementById("Q-7").innerHTML+". ";
+if (chtlroi.indexOf("c7")<0){
+ndread=ndread+" "+document.getElementById("c7A._").innerHTML+". "+" "+document.getElementById("c7B.").innerHTML+". "+" "+document.getElementById("c7C.").innerHTML+". "+" "+document.getElementById("c7D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c7A._").innerHTML+". ";}
+say(ndread);
+break;
+case "c8":
+var ndread=document.getElementById("Q-8").innerHTML+". ";
+if (chtlroi.indexOf("c8")<0){
+ndread=ndread+" "+document.getElementById("c8A._").innerHTML+". "+" "+document.getElementById("c8B.").innerHTML+". "+" "+document.getElementById("c8C.").innerHTML+". "+" "+document.getElementById("c8D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c8A._").innerHTML+". ";}
+say(ndread);
+break;
+case "c9":
+var ndread=document.getElementById("Q-9").innerHTML+". ";
+if (chtlroi.indexOf("c9")<0){
+ndread=ndread+" "+document.getElementById("c9A.").innerHTML+". "+" "+document.getElementById("c9B._").innerHTML+". "+" "+document.getElementById("c9C.").innerHTML+". "+" "+document.getElementById("c9D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c9B._").innerHTML+". ";}
+say(ndread);
+break;
+case "c10":
+var ndread=document.getElementById("Q-10").innerHTML+". ";
+if (chtlroi.indexOf("c10")<0){
+ndread=ndread+" "+document.getElementById("c10A.").innerHTML+". "+" "+document.getElementById("c10B.").innerHTML+". "+" "+document.getElementById("c10C._").innerHTML+". "+" "+document.getElementById("c10D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c10C._").innerHTML+". ";}
+say(ndread);
+break;
+case "c11":
+var ndread=document.getElementById("Q-11").innerHTML+". ";
+if (chtlroi.indexOf("c11")<0){
+ndread=ndread+" "+document.getElementById("c11A.").innerHTML+". "+" "+document.getElementById("c11B.").innerHTML+". "+" "+document.getElementById("c11C._").innerHTML+". "+" "+document.getElementById("c11D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c11C._").innerHTML+". ";}
+say(ndread);
+break;
+case "c12":
+var ndread=document.getElementById("Q-12").innerHTML+". ";
+if (chtlroi.indexOf("c12")<0){
+ndread=ndread+" "+document.getElementById("c12A.").innerHTML+". "+" "+document.getElementById("c12B._").innerHTML+". "+" "+document.getElementById("c12C.").innerHTML+". "+" "+document.getElementById("c12D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c12B._").innerHTML+". ";}
+say(ndread);
+break;
+case "c13":
+var ndread=document.getElementById("Q-13").innerHTML+". ";
+if (chtlroi.indexOf("c13")<0){
+ndread=ndread+" "+document.getElementById("c13A._").innerHTML+". "+" "+document.getElementById("c13B.").innerHTML+". "+" "+document.getElementById("c13C.").innerHTML+". "+" "+document.getElementById("c13D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c13A._").innerHTML+". ";}
+say(ndread);
+break;
+case "c14":
+var ndread=document.getElementById("Q-14").innerHTML+". ";
+if (chtlroi.indexOf("c14")<0){
+ndread=ndread+" "+document.getElementById("c14A.").innerHTML+". "+" "+document.getElementById("c14B._").innerHTML+". "+" "+document.getElementById("c14C.").innerHTML+". "+" "+document.getElementById("c14D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c14B._").innerHTML+". ";}
+say(ndread);
+break;
+case "c15":
+var ndread=document.getElementById("Q-15").innerHTML+". ";
+if (chtlroi.indexOf("c15")<0){
+ndread=ndread+" "+document.getElementById("c15A.").innerHTML+". "+" "+document.getElementById("c15B.").innerHTML+". "+" "+document.getElementById("c15C._").innerHTML+". "+" "+document.getElementById("c15D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c15C._").innerHTML+". ";}
+say(ndread);
+break;
+case "c16":
+var ndread=document.getElementById("Q-16").innerHTML+". ";
+if (chtlroi.indexOf("c16")<0){
+ndread=ndread+" "+document.getElementById("c16A.").innerHTML+". "+" "+document.getElementById("c16B.").innerHTML+". "+" "+document.getElementById("c16C._").innerHTML+". "+" "+document.getElementById("c16D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c16C._").innerHTML+". ";}
+say(ndread);
+break;
+case "c17":
+var ndread=document.getElementById("Q-17").innerHTML+". ";
+if (chtlroi.indexOf("c17")<0){
+ndread=ndread+" "+document.getElementById("c17A.").innerHTML+". "+" "+document.getElementById("c17B.").innerHTML+". "+" "+document.getElementById("c17C._").innerHTML+". "+" "+document.getElementById("c17D.").innerHTML+". ";
+}else{
+ndread=ndread+" Trả lời đúng là "+document.getElementById("c17C._").innerHTML+". ";}
+say(ndread);
+break;
+}}
+</script>
+<script>
+function getSelectValue(cau){
+let selectedValue;
+switch (cau) {
+case "c1":
+selectedValue=document.myform.question_1.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c1A.").style.color="red"}
+document.getElementById("c1inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c1B.").style.color="red"}
+document.getElementById("c1inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C._")>=0){document.getElementById("c1C._").style.color="blue"}
+document.getElementById("c1C._").style.color = "blue";
+document.getElementById("c1inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c1D.").style.color="red"}
+document.getElementById("c1inp4").setAttribute("disabled","disabled");
+document.getElementById('ans1').innerHTML =' Hoạt động có mục đích, có ý thức..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-1").innerHTML+"... Trả lời: "+document.getElementById("ans1").innerHTML);
+chtlroi=chtlroi+"c1 ";
+break;
+case "c2":
+selectedValue=document.myform.question_2.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c2A.").style.color="red"}
+document.getElementById("c2inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c2B.").style.color="red"}
+document.getElementById("c2inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c2C.").style.color="red"}
+document.getElementById("c2inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D._")>=0){document.getElementById("c2D._").style.color="blue"}
+document.getElementById("c2D._").style.color = "blue";
+document.getElementById("c2inp4").setAttribute("disabled","disabled");
+document.getElementById('ans2').innerHTML =' Sản xuất của cải vật chất..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-2").innerHTML+"... Trả lời: "+document.getElementById("ans2").innerHTML);
+chtlroi=chtlroi+"c2 ";
+break;
+case "c3":
+selectedValue=document.myform.question_3.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c3A.").style.color="red"}
+document.getElementById("c3inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c3B.").style.color="red"}
+document.getElementById("c3inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c3C.").style.color="red"}
+document.getElementById("c3inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D._")>=0){document.getElementById("c3D._").style.color="blue"}
+document.getElementById("c3D._").style.color = "blue";
+document.getElementById("c3inp4").setAttribute("disabled","disabled");
+document.getElementById('ans3').innerHTML =' Vì sức lao động có tính sáng tạo..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-3").innerHTML+"... Trả lời: "+document.getElementById("ans3").innerHTML);
+chtlroi=chtlroi+"c3 ";
+break;
+case "c4":
+selectedValue=document.myform.question_4.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c4A.").style.color="red"}
+document.getElementById("c4inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c4B.").style.color="red"}
+document.getElementById("c4inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C._")>=0){document.getElementById("c4C._").style.color="blue"}
+document.getElementById("c4C._").style.color = "blue";
+document.getElementById("c4inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c4D.").style.color="red"}
+document.getElementById("c4inp4").setAttribute("disabled","disabled");
+document.getElementById('ans4').innerHTML =' Là cơ sở..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-4").innerHTML+"... Trả lời: "+document.getElementById("ans4").innerHTML);
+chtlroi=chtlroi+"c4 ";
+break;
+case "c5":
+selectedValue=document.myform.question_5.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c5A.").style.color="red"}
+document.getElementById("c5inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c5B.").style.color="red"}
+document.getElementById("c5inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C._")>=0){document.getElementById("c5C._").style.color="blue"}
+document.getElementById("c5C._").style.color = "blue";
+document.getElementById("c5inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c5D.").style.color="red"}
+document.getElementById("c5inp4").setAttribute("disabled","disabled");
+document.getElementById('ans5').innerHTML =' Người sản xuất mang hàng hóa ra thị trường bán và bán được.'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-5").innerHTML+"... Trả lời: "+document.getElementById("ans5").innerHTML);
+chtlroi=chtlroi+"c5 ";
+break;
+case "c6":
+selectedValue=document.myform.question_6.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c6A.").style.color="red"}
+document.getElementById("c6inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c6B.").style.color="red"}
+document.getElementById("c6inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c6C.").style.color="red"}
+document.getElementById("c6inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D._")>=0){document.getElementById("c6D._").style.color="blue"}
+document.getElementById("c6D._").style.color = "blue";
+document.getElementById("c6inp4").setAttribute("disabled","disabled");
+document.getElementById('ans6').innerHTML =' dịch vụ..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-6").innerHTML+"... Trả lời: "+document.getElementById("ans6").innerHTML);
+chtlroi=chtlroi+"c6 ";
+break;
+case "c7":
+selectedValue=document.myform.question_7.value;
+if (selectedValue.indexOf("A._")>=0){document.getElementById("c7A._").style.color="blue"}
+document.getElementById("c7A._").style.color = "blue";
+document.getElementById("c7inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c7B.").style.color="red"}
+document.getElementById("c7inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c7C.").style.color="red"}
+document.getElementById("c7inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c7D.").style.color="red"}
+document.getElementById("c7inp4").setAttribute("disabled","disabled");
+document.getElementById('ans7').innerHTML =' Giá trị..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-7").innerHTML+"... Trả lời: "+document.getElementById("ans7").innerHTML);
+chtlroi=chtlroi+"c7 ";
+break;
+case "c8":
+selectedValue=document.myform.question_8.value;
+if (selectedValue.indexOf("A._")>=0){document.getElementById("c8A._").style.color="blue"}
+document.getElementById("c8A._").style.color = "blue";
+document.getElementById("c8inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c8B.").style.color="red"}
+document.getElementById("c8inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c8C.").style.color="red"}
+document.getElementById("c8inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c8D.").style.color="red"}
+document.getElementById("c8inp4").setAttribute("disabled","disabled");
+document.getElementById('ans8').innerHTML =' Quyết định..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-8").innerHTML+"... Trả lời: "+document.getElementById("ans8").innerHTML);
+chtlroi=chtlroi+"c8 ";
+break;
+case "c9":
+selectedValue=document.myform.question_9.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c9A.").style.color="red"}
+document.getElementById("c9inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B._")>=0){document.getElementById("c9B._").style.color="blue"}
+document.getElementById("c9B._").style.color = "blue";
+document.getElementById("c9inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c9C.").style.color="red"}
+document.getElementById("c9inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c9D.").style.color="red"}
+document.getElementById("c9inp4").setAttribute("disabled","disabled");
+document.getElementById('ans9').innerHTML =' Giá trị của hàng hóa..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-9").innerHTML+"... Trả lời: "+document.getElementById("ans9").innerHTML);
+chtlroi=chtlroi+"c9 ";
+break;
+case "c10":
+selectedValue=document.myform.question_10.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c10A.").style.color="red"}
+document.getElementById("c10inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c10B.").style.color="red"}
+document.getElementById("c10inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C._")>=0){document.getElementById("c10C._").style.color="blue"}
+document.getElementById("c10C._").style.color = "blue";
+document.getElementById("c10inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c10D.").style.color="red"}
+document.getElementById("c10inp4").setAttribute("disabled","disabled");
+document.getElementById('ans10').innerHTML =' Sức lao động..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-10").innerHTML+"... Trả lời: "+document.getElementById("ans10").innerHTML);
+chtlroi=chtlroi+"c10 ";
+break;
+case "c11":
+selectedValue=document.myform.question_11.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c11A.").style.color="red"}
+document.getElementById("c11inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c11B.").style.color="red"}
+document.getElementById("c11inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C._")>=0){document.getElementById("c11C._").style.color="blue"}
+document.getElementById("c11C._").style.color = "blue";
+document.getElementById("c11inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c11D.").style.color="red"}
+document.getElementById("c11inp4").setAttribute("disabled","disabled");
+document.getElementById('ans11').innerHTML =' Sức lao động..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-11").innerHTML+"... Trả lời: "+document.getElementById("ans11").innerHTML);
+chtlroi=chtlroi+"c11 ";
+break;
+case "c12":
+selectedValue=document.myform.question_12.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c12A.").style.color="red"}
+document.getElementById("c12inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B._")>=0){document.getElementById("c12B._").style.color="blue"}
+document.getElementById("c12B._").style.color = "blue";
+document.getElementById("c12inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c12C.").style.color="red"}
+document.getElementById("c12inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c12D.").style.color="red"}
+document.getElementById("c12inp4").setAttribute("disabled","disabled");
+document.getElementById('ans12').innerHTML =' Sử dụng..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-12").innerHTML+"... Trả lời: "+document.getElementById("ans12").innerHTML);
+chtlroi=chtlroi+"c12 ";
+break;
+case "c13":
+selectedValue=document.myform.question_13.value;
+if (selectedValue.indexOf("A._")>=0){document.getElementById("c13A._").style.color="blue"}
+document.getElementById("c13A._").style.color = "blue";
+document.getElementById("c13inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c13B.").style.color="red"}
+document.getElementById("c13inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c13C.").style.color="red"}
+document.getElementById("c13inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c13D.").style.color="red"}
+document.getElementById("c13inp4").setAttribute("disabled","disabled");
+document.getElementById('ans13').innerHTML =' Tư liệu lao động..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-13").innerHTML+"... Trả lời: "+document.getElementById("ans13").innerHTML);
+chtlroi=chtlroi+"c13 ";
+break;
+case "c14":
+selectedValue=document.myform.question_14.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c14A.").style.color="red"}
+document.getElementById("c14inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B._")>=0){document.getElementById("c14B._").style.color="blue"}
+document.getElementById("c14B._").style.color = "blue";
+document.getElementById("c14inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C.")>=0){document.getElementById("c14C.").style.color="red"}
+document.getElementById("c14inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c14D.").style.color="red"}
+document.getElementById("c14inp4").setAttribute("disabled","disabled");
+document.getElementById('ans14').innerHTML =' Tư liệu lao động..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-14").innerHTML+"... Trả lời: "+document.getElementById("ans14").innerHTML);
+chtlroi=chtlroi+"c14 ";
+break;
+case "c15":
+selectedValue=document.myform.question_15.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c15A.").style.color="red"}
+document.getElementById("c15inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c15B.").style.color="red"}
+document.getElementById("c15inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C._")>=0){document.getElementById("c15C._").style.color="blue"}
+document.getElementById("c15C._").style.color = "blue";
+document.getElementById("c15inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c15D.").style.color="red"}
+document.getElementById("c15inp4").setAttribute("disabled","disabled");
+document.getElementById('ans15').innerHTML =' 7 giờ..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-15").innerHTML+"... Trả lời: "+document.getElementById("ans15").innerHTML);
+chtlroi=chtlroi+"c15 ";
+break;
+case "c16":
+selectedValue=document.myform.question_16.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c16A.").style.color="red"}
+document.getElementById("c16inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c16B.").style.color="red"}
+document.getElementById("c16inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C._")>=0){document.getElementById("c16C._").style.color="blue"}
+document.getElementById("c16C._").style.color = "blue";
+document.getElementById("c16inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c16D.").style.color="red"}
+document.getElementById("c16inp4").setAttribute("disabled","disabled");
+document.getElementById('ans16').innerHTML =' Thời gian lao động cá biệt..'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-16").innerHTML+"... Trả lời: "+document.getElementById("ans16").innerHTML);
+chtlroi=chtlroi+"c16 ";
+break;
+case "c17":
+selectedValue=document.myform.question_17.value;
+if (selectedValue.indexOf("A.")>=0){document.getElementById("c17A.").style.color="red"}
+document.getElementById("c17inp1").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("B.")>=0){document.getElementById("c17B.").style.color="red"}
+document.getElementById("c17inp2").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("C._")>=0){document.getElementById("c17C._").style.color="blue"}
+document.getElementById("c17C._").style.color = "blue";
+document.getElementById("c17inp3").setAttribute("disabled","disabled");
+if (selectedValue.indexOf("D.")>=0){document.getElementById("c17D.").style.color="red"}
+document.getElementById("c17inp4").setAttribute("disabled","disabled");
+document.getElementById('ans17').innerHTML =' 15 con.'.replaceAll('(nhay)',"'");
+say(document.getElementById("Q-17").innerHTML+"... Trả lời: "+document.getElementById("ans17").innerHTML);
+chtlroi=chtlroi+"c17 ";
+break;
+}}
+</script>
+
+<script>
+function say(message){
+message=message.replace('<span style="color:blue">', '');
+message=message.replace('</span>', '');
+message=message.replace('<br>', '');
+//ndluu=message; //se dung cho noi lai
+
+let speech = new SpeechSynthesisUtterance(message);
+speech.lang = "vi-VN";
+window.speechSynthesis.speak(speech);}
+</script>              
+</body>
+</html>
+
