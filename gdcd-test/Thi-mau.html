@@ -18,7 +18,7 @@
 .grid-container {
  display: grid;
   grid-template-areas:
-    'header header header header header header'
+    'menu header header header header header'
     'menu main main main right right'
     'menu footer footer footer footer footer';
   grid-gap: 1px;
@@ -26,7 +26,7 @@
   padding: 1px;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 98.6%;
 }
 
 .grid-container > div {
@@ -59,14 +59,20 @@ p {font-size: 13pt;font-weight:600;}
 .f-grid {display: flex;justify-content: space-between;margin-left:-0.5rem;flex-flow: row wrap;}
 
 .f-grid-col {flex: 3 0;background-color: hsl(240, 30%, 92%);margin-left: 0.5rem;margin-bottom: 1rem;padding: 1rem;font-size: 13pt;}
-
+.footer {
+        background-color: gray;
+        color: #ffffff;
+        text-align: center;
+        font-size: 12px;
+        padding: 20px;
+    }
+    
 </style>
 <script
     src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous">
 </script>
-
 <script>
     function SubForm (){
         $.ajax({
@@ -83,40 +89,27 @@ p {font-size: 13pt;font-weight:600;}
     }
 </script>
 <!--End Goi jquery va gui tt den excel-->
-<script> //Set thoi gian lam bai con lai
-        //Thoi diem ket thuc lam bai kiem tra
-        var countDownDate = new Date("Oct 25, 2021 20:45:00").getTime();
-        
-        var x = setInterval(function() {
-          var now = new Date().getTime();
-          var distance = countDownDate - now;
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-          document.getElementById("timecon").innerHTML = 'Thời gian còn <br/>' + ' <span style=color:red;font-size:24px;">' + hours + ":"
-          + minutes + ":" + seconds + '</span>';
-    
-          if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("timecon").innerHTML = "HẾT THỜI HẠN";
-          }
-        }, 1000);
-</script>
 
 <script>const madethi = "121";
 const danew=["A","B","C","D","E","F"];
 const tscau=16;
 var chlbai="";
+const ngaygiobd="Oct 28, 2021 09:00:00";
+const ngaygiokt="Oct 28, 2021 13:00:00";
+
 </script>
 </head>
 <body>
 <form id="myForm" name="myForm">
 <div class="grid-container">
-<div class="item1">Kiểm tra GDCD-10 ngày 30/10/21 (60 phút)</div>
+<div class="item1" id="tieude"></div>
 
-<div class="item2"><p id="timecon"></p></div>
+<div class="item2">
+  <p id="gioThi"></p>
+  <p id="gioNay"></p>
+  <p id="thongBao"></p>
+
+</div>
 <div class="item3"><label for="fname">Họ & Tên Hs: </label><input name="HOTEN" value=""></div>  
 <div class="item4"><label for="lname">Lớp-Trường: </label><input name="TRUONG" value=""></div>
 <div class="item5">
@@ -128,8 +121,8 @@ var chlbai="";
 </div>
 </div>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<hr>
-<p id="Q-1"><span style="color:blue">Câu 1:</span>   Đặc trưng cơ bản của pháp luật thể hiện ở tính quy phạm phổ biến, tính xác định chặt chẽ về mặt hình thức và tính nào sau đây?</p>
+<hr id="gachngang1">
+<p class="clchoi" id="Q-1"><span style="color:blue">Câu 1:</span>   Đặc trưng cơ bản của pháp luật thể hiện ở tính quy phạm phổ biến, tính xác định chặt chẽ về mặt hình thức và tính nào sau đây?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="1" name="question_1"  value="001D05A" onclick="getClassName()";> Bảo mật, không phổ biến.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="1" name="question_1"  value="001C04B" onclick="getClassName()";> Ổn định, tránh thay đổi.</div>
@@ -137,7 +130,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="1" name="question_1"  value="001B02D" onclick="getClassName()";> Quyền lực, bắt buộc chung.</div>
 </div>
 </form>
-<p id="Q-2"><span style="color:blue">Câu 2:</span>   Năng lực trách nhiệm pháp lí được hiểu là khả năng của người đã đạt một độ tuổi nhất định theo quy định của pháp luật và có thể tự</p>
+<p class="clchoi" id="Q-2"><span style="color:blue">Câu 2:</span>   Năng lực trách nhiệm pháp lí được hiểu là khả năng của người đã đạt một độ tuổi nhất định theo quy định của pháp luật và có thể tự</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="2" name="question_2"  value="002C03A" onclick="getClassName()";> điều khiển được hành vi của mình.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="2" name="question_2"  value="002D05B" onclick="getClassName()";> xóa bỏ quyền tự do tín ngưỡng.</div>
@@ -145,7 +138,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="2" name="question_2"  value="002B03D" onclick="getClassName()";> thay đổi mọi quan hệ xã hội.</div>
 </div>
 </form>
-<p id="Q-3"><span style="color:blue">Câu 3:</span>   Người làm nghề tự do thực hiện không đúng thời gian như thỏa thuận trong hợp đồng vận chuyển hành khách phải chịu trách nhiệm pháp lí nào sau đây?</p>
+<p class="clchoi" id="Q-3"><span style="color:blue">Câu 3:</span>   Người làm nghề tự do thực hiện không đúng thời gian như thỏa thuận trong hợp đồng vận chuyển hành khách phải chịu trách nhiệm pháp lí nào sau đây?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="3" name="question_3"  value="003A02A" onclick="getClassName()";> Hành chính.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="3" name="question_3"  value="003B03B" onclick="getClassName()";> Hình sự.</div>
@@ -153,7 +146,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="3" name="question_3"  value="003D05D" onclick="getClassName()";> Kỷ luật.</div>
 </div>
 </form>
-<p id="Q-4"><span style="color:blue">Câu 4:</span>   Vi phạm dân sự là hành vi vi phạm pháp luật, xâm phạm tới các quan hệ nhân thân và quan hệ nào sau đây?</p>
+<p class="clchoi" id="Q-4"><span style="color:blue">Câu 4:</span>   Vi phạm dân sự là hành vi vi phạm pháp luật, xâm phạm tới các quan hệ nhân thân và quan hệ nào sau đây?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="4" name="question_4"  value="004B03A" onclick="getClassName()";> Đời tư.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="4" name="question_4"  value="004C04B" onclick="getClassName()";> Huyết thống.</div>
@@ -161,7 +154,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="4" name="question_4"  value="004D04D" onclick="getClassName()";> Tài sản.</div>
 </div>
 </form>
-<p id="Q-5"><span style="color:blue">Câu 5:</span>   Để phân biệt quy phạm pháp luật với các quy phạm xã hội khác phải dựa vào đặc trưng nào sau đây?</p>
+<p class="clchoi" id="Q-5"><span style="color:blue">Câu 5:</span>   Để phân biệt quy phạm pháp luật với các quy phạm xã hội khác phải dựa vào đặc trưng nào sau đây?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="5" name="question_5"  value="005C04A" onclick="getClassName()";> Hệ tư tưởng tôn giáo.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="5" name="question_5"  value="005B03B" onclick="getClassName()";> Nền tảng của đạo đức.</div>
@@ -169,7 +162,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="5" name="question_5"  value="005D04D" onclick="getClassName()";> Tính quy phạm phổ biến.</div>
 </div>
 </form>
-<p id="Q-6"><span style="color:blue">Câu 6:</span>   Mọi cá nhân, tổ chức sử dụng đúng đắn các quyền của mình làm những gì pháp luật cho phép làm là thực hiện pháp luật theo hình thức nào sau đây?</p>
+<p class="clchoi" id="Q-6"><span style="color:blue">Câu 6:</span>   Mọi cá nhân, tổ chức sử dụng đúng đắn các quyền của mình làm những gì pháp luật cho phép làm là thực hiện pháp luật theo hình thức nào sau đây?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="6" name="question_6"  value="006A01A" onclick="getClassName()";> Sử dụng pháp luật.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="6" name="question_6"  value="006C04B" onclick="getClassName()";> Tuân thủ pháp luật.</div>
@@ -177,7 +170,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="6" name="question_6"  value="006D05D" onclick="getClassName()";> Áp dụng pháp luật.</div>
 </div>
 </form>
-<p id="Q-7"><span style="color:blue">Câu 7:</span>   Luật giao thông đường bộ quy định cấm xe ô tô, xe máy, xe đạp đi ngược chiều. Quy định này được áp dụng chung cho mọi người tham gia giao thông. Điều này thể hiện đặc điểm nào dưới đây của pháp luật ?</p>
+<p class="clchoi" id="Q-7"><span style="color:blue">Câu 7:</span>   Luật giao thông đường bộ quy định cấm xe ô tô, xe máy, xe đạp đi ngược chiều. Quy định này được áp dụng chung cho mọi người tham gia giao thông. Điều này thể hiện đặc điểm nào dưới đây của pháp luật ?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="7" name="question_7"  value="007C04A" onclick="getClassName()";> Yêu cầu chung cho mọi người.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="7" name="question_7"  value="007D04B" onclick="getClassName()";> Tính quy phạm phổ biến.</div>
@@ -185,7 +178,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="7" name="question_7"  value="007A02D" onclick="getClassName()";> Tính quyền lực chung.</div>
 </div>
 </form>
-<p id="Q-8"><span style="color:blue">Câu 8:</span>   Tính quy phạm phổ biến làm nên sự bình đẳng và giá trị nào sau đây của pháp luật?</p>
+<p class="clchoi" id="Q-8"><span style="color:blue">Câu 8:</span>   Tính quy phạm phổ biến làm nên sự bình đẳng và giá trị nào sau đây của pháp luật?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="8" name="question_8"  value="008C03A" onclick="getClassName()";> Công bằng.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="8" name="question_8"  value="008B03B" onclick="getClassName()";> Đối lập.</div>
@@ -193,7 +186,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="8" name="question_8"  value="008D05D" onclick="getClassName()";> Bất biến.</div>
 </div>
 </form>
-<p id="Q-9"><span style="color:blue">Câu 9:</span>   Các văn bản có chứa quy phạm phạm pháp luật do cơ quan Nhà nước có thẩm quyền ban hành thể hiện đặc trưng nào sau đây của pháp luật?</p>
+<p class="clchoi" id="Q-9"><span style="color:blue">Câu 9:</span>   Các văn bản có chứa quy phạm phạm pháp luật do cơ quan Nhà nước có thẩm quyền ban hành thể hiện đặc trưng nào sau đây của pháp luật?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="9" name="question_9"  value="009A02A" onclick="getClassName()";> Phổ cập mọi ngôn ngữ vùng miền.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="9" name="question_9"  value="009D05B" onclick="getClassName()";> Thuần túy áp dụng biện pháp cưỡng chế.</div>
@@ -201,7 +194,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="9" name="question_9"  value="009B03D" onclick="getClassName()";> Tính xác định chặt chẽ về nội dung.</div>
 </div>
 </form>
-<p id="Q-10"><span style="color:blue">Câu 10:</span>   Những quy tắc xử sự chung được áp dụng với mọi người trong mọi lĩnh vực của đời sống xã hội thể hiện đặc trưng nào sau đây của pháp luật?</p>
+<p class="clchoi" id="Q-10"><span style="color:blue">Câu 10:</span>   Những quy tắc xử sự chung được áp dụng với mọi người trong mọi lĩnh vực của đời sống xã hội thể hiện đặc trưng nào sau đây của pháp luật?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="10" name="question_10"  value="010C04A" onclick="getClassName()";> Tính ổn định lâu dài.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="10" name="question_10"  value="010B03B" onclick="getClassName()";> Tính quyền lực.</div>
@@ -209,7 +202,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="10" name="question_10"  value="010D04D" onclick="getClassName()";> Tính quy phạm phổ biến.</div>
 </div>
 </form>
-<p id="Q-11"><span style="color:blue">Câu 11:</span>   Chị M viết bài chia sẽ kinh nghiệm phòng, chống cháy nổ cho người dân. Chị M đã thực hiện pháp luật theo hình thức nào sau đây?</p>
+<p class="clchoi" id="Q-11"><span style="color:blue">Câu 11:</span>   Chị M viết bài chia sẽ kinh nghiệm phòng, chống cháy nổ cho người dân. Chị M đã thực hiện pháp luật theo hình thức nào sau đây?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="11" name="question_11"  value="011C04A" onclick="getClassName()";> Thi hành pháp luật.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="11" name="question_11"  value="011B02B" onclick="getClassName()";> Sử dụng pháp luật.</div>
@@ -217,7 +210,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="11" name="question_11"  value="011A02D" onclick="getClassName()";> Tuân thủ pháp luật.</div>
 </div>
 </form>
-<p id="Q-12"><span style="color:blue">Câu 12:</span>   Chủ thể nào sau đây phải chịu trách nhiệm kỷ luật khi vi phạm pháp luật?</p>
+<p class="clchoi" id="Q-12"><span style="color:blue">Câu 12:</span>   Chủ thể nào sau đây phải chịu trách nhiệm kỷ luật khi vi phạm pháp luật?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="12" name="question_12"  value="012B03A" onclick="getClassName()";> Lao động tự do.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="12" name="question_12"  value="012C04B" onclick="getClassName()";> Sinh viên tình nguyện.</div>
@@ -225,7 +218,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="12" name="question_12"  value="012A02D" onclick="getClassName()";> Bộ phận tiểu thương.</div>
 </div>
 </form>
-<p id="Q-13"><span style="color:blue">Câu 13:</span>   Cán bộ xã X là ông M đã nhận 10 triệu đồng và làm giả hồ sơ để giúp ông D được hưởng chế độ trợ cấp đặc biệt. Ông M đã vi phạm pháp luật nào sau đây?</p>
+<p class="clchoi" id="Q-13"><span style="color:blue">Câu 13:</span>   Cán bộ xã X là ông M đã nhận 10 triệu đồng và làm giả hồ sơ để giúp ông D được hưởng chế độ trợ cấp đặc biệt. Ông M đã vi phạm pháp luật nào sau đây?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="13" name="question_13"  value="013C03A" onclick="getClassName()";> Hình sự và kỉ luật.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="13" name="question_13"  value="013D05B" onclick="getClassName()";> Hành chính và dân sự.</div>
@@ -233,7 +226,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="13" name="question_13"  value="013B03D" onclick="getClassName()";> Hình sự và dân sự.</div>
 </div>
 </form>
-<p id="Q-14"><span style="color:blue">Câu 14:</span>   Pháp luật không thể hiện đặc trưng cơ bản nào sau đây?</p>
+<p class="clchoi" id="Q-14"><span style="color:blue">Câu 14:</span>   Pháp luật không thể hiện đặc trưng cơ bản nào sau đây?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="14" name="question_14"  value="014C04A" onclick="getClassName()";> Quyền lực, bắt buộc chung.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="14" name="question_14"  value="014A02B" onclick="getClassName()";> Quy phạm phổ biến.</div>
@@ -241,7 +234,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="14" name="question_14"  value="014D05D" onclick="getClassName()";> Xác định chặt chẽ về hình thức.</div>
 </div>
 </form>
-<p id="Q-15"><span style="color:blue">Câu 15:</span>   Anh A được cấp giấy phép mở đại lý cung cấp vật liệu xây dựng. Do làm ăn thua lỗ,  anh A thường xuyên nộp thuế không đúng thời hạn nên bị cơ quan chức năng đình chỉ hoạt động kinh doanh. Anh A đã phải chịu trách nhiệm pháp lí nào dưới đây?</p>
+<p class="clchoi" id="Q-15"><span style="color:blue">Câu 15:</span>   Anh A được cấp giấy phép mở đại lý cung cấp vật liệu xây dựng. Do làm ăn thua lỗ,  anh A thường xuyên nộp thuế không đúng thời hạn nên bị cơ quan chức năng đình chỉ hoạt động kinh doanh. Anh A đã phải chịu trách nhiệm pháp lí nào dưới đây?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="15" name="question_15"  value="015A02A" onclick="getClassName()";> Hình sự.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="15" name="question_15"  value="015D05B" onclick="getClassName()";> Kỉ luật.</div>
@@ -249,7 +242,7 @@ var chlbai="";
 <div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="15" name="question_15"  value="015B03D" onclick="getClassName()";> Dân sự.</div>
 </div>
 </form>
-<p id="Q-16"><span style="color:blue">Câu 16:</span>   Gia đình anh A, anh C và chị D cùng sinh sống tại địa phương X. Anh A đề nghị và được anh C đồng ý sử dụng thẻ bảo hiểm y tế của anh C để khám bệnh. Khi chị D đe dọa tố cáo sự việc trên, anh A đã ném chất thải làm bẩn tường nhà chị D; Vợ anh A là chị B đến trụ sở cơ quan nơi chị D công tác gây rối nên bị cơ quan chức năng lập biên bản xử phạt. Trong tình huống trên, anh A, anh C và chị B vi phạm pháp luật loại nào?</p>
+<p class="clchoi" id="Q-16"><span style="color:blue">Câu 16:</span>   Gia đình anh A, anh C và chị D cùng sinh sống tại địa phương X. Anh A đề nghị và được anh C đồng ý sử dụng thẻ bảo hiểm y tế của anh C để khám bệnh. Khi chị D đe dọa tố cáo sự việc trên, anh A đã ném chất thải làm bẩn tường nhà chị D; Vợ anh A là chị B đến trụ sở cơ quan nơi chị D công tác gây rối nên bị cơ quan chức năng lập biên bản xử phạt. Trong tình huống trên, anh A, anh C và chị B vi phạm pháp luật loại nào?</p>
 <div class="f-grid">
 <div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="16" name="question_16"  value="016D05A" onclick="getClassName()";> Kỉ luật.</div>
 <div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="16" name="question_16"  value="016B02B" onclick="getClassName()";> Hành chính.</div>
@@ -282,8 +275,6 @@ var chlbai="";
               chlbai=chlbai+"_"+radioArr[i].value+tbdd;
             }  
         }
-        //alert(chlbai);
-
     }  
     </script>
     <script>
@@ -328,8 +319,98 @@ var chlbai="";
             ele[i].checked = false;
         }
       }
+      chedethi();
     }
-    </script>
+</script>
+
+<script> 
+  //const ngaygiobd="Oct 28, 2021 09:00:00";
+  //const ngaygiokt="Oct 28, 2021 09:45:00";
+  document.getElementById("tieude").innerHTML='KTRA GDCD '+' ('+ngaygiobd.slice(0,12)+')';
+  
+  var startThi =  new Date(ngaygiobd).getTime();
+  var endThi =    new Date(ngaygiokt).getTime();
+  var lanmode=0;
+  var lanchede=0;
+  var stoptb=0;
+  document.getElementById("gioThi").innerHTML='Giờ thi: <span style="color:blue;">'+ngaygiobd.slice(-8,-3)+'</span> - <span style="color:red;">'+ngaygiokt.slice(-8,-3)+'</span>';
+  
+    
+  var x = setInterval(function() {
+      var today = new Date();
+      var nowTimes=today.getTime();    //lay thoi gian now tinh bang  mili giay,cu 1s thilaylai
+      var time = today.getHours() + ":" + today.getMinutes();// + ":" + today.getSeconds();
+      document.getElementById("gioNay").innerHTML='Giờ này: <span style="color:brown;">'+time+'</span>';
+   
+      if (nowTimes<startThi && stoptb==0){
+          document.getElementById("thongBao").innerHTML='<span style="color:red;">Chưa tới giờ thi. Đề thi sẽ tự động mở khi đến giờ.</span>';
+          stoptb=stoptb+1
+
+      }
+  
+      //1.neu-trong-gio-thi-ma-chua-mo-de-lan-nao-thi-dc-thi
+      if (nowTimes>=startThi && nowTimes<endThi && lanmode==0){
+          document.getElementById("thongBao").innerHTML='';
+          alert('Đã đến giờ thi. Hãy nhấp OK để mở đề thi và bắt đầu tính thời gian làm bài.');
+          lanmode=1;
+          hiendethi();
+          
+      }
+      if (nowTimes>=startThi && nowTimes<endThi && lanmode==1){
+        document.getElementById("thongBao").innerHTML='Còn <span style="color:red; font-size:18pt;">'+Math.round((endThi-nowTimes)/60000)+'</span> phút';
+      
+      }  
+
+      //2.het-han-thi-thi-khong-vao-thi-dc-clear
+      if (lanmode==0 && nowTimes>endThi && lanchede==0){
+          document.getElementById("thongBao").innerHTML='<span style="color:red;">ĐÃ QUA THỜI HẠN THI</span>';
+          lanchede=1;
+          
+
+        }
+      //3.neu-dang-thi-ma-het-gio-thi-nut-nop-bai-tu-dong-kich-hoat-roi-clear
+      if (lanmode==1 && nowTimes>endThi && lanchede==0){
+          alert("Đã hết giờ làm bài. Nút nộp bài sẽ tự động kích hoạt.");
+          check();
+          chedethi();
+          lanchede=1;
+          document.getElementById("thongBao").innerHTML='<span style="color:red;">Cuộc thi đã kết thúc</span>';
+      }
+  },1000);
+</script>
+
+<script>
+  function hiendethi(){
+    for (let element of document.getElementsByClassName("f-grid")){
+      element.style.visibility='visible';
+    }
+    for (let element of document.getElementsByClassName("clchoi")){
+      element.style.visibility='visible';
+    }
+    for (let element of document.getElementsByClassName("btn")){
+      element.style.visibility='visible';
+    }
+  }
+</script>
+<script>//tu  dong che khi load trang
+function chedethi(){
+  for (let element of document.getElementsByClassName("f-grid")){
+    element.style.visibility='hidden';
+  }
+  for (let element of document.getElementsByClassName("clchoi")){
+    element.style.visibility='hidden';
+  }
+  for (let element of document.getElementsByClassName("btn")){
+    element.style.visibility='hidden';
+  }
+}
+chedethi();
+</script>
+<div class="footer">
+  <p>Chú ý rằng trước khi ấn nút nộp bài, bạn phải ghi đầy đủ họ tên và lớp.</p> 
+  <p>Sau khi ấn nút thì đề thi đóng lại và sẽ hiển thị 2 thông báo kết quả.</p>
+</div>
+
 </body>
 </html>
 
