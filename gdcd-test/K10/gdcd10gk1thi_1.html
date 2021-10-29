@@ -1,0 +1,594 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">jQuery(document).ready(function () {jQuery('body').bind('cut copy paste', function (e) {e.preventDefault();});jQuery("body").on("contextmenu",function(e){return false;});});jQuery(document).keydown(function (event) {if (event.keyCode == 123) {return false;}if (event.ctrlKey && event.shiftKey && event.keyCode == 67) {return false;}if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {return false;}});document.onkeydown = function(e) {if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {return false;} else {return true;}};jQuery(document).keypress("u",function(e) {if(e.ctrlKey) {return false;} else {return true;}});document.body.addEventListener('keydown', event => {if (event.ctrlKey && 'spa'.indexOf(event.key) !== -1) {event.preventDefault()}})</script>  </script>
+<title>Hang.gdcd</title>
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+ display: grid;
+  grid-template-areas:
+    'menu header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 1px;
+  background-color: #2196F3;
+  padding: 1px;
+  position: fixed;
+  top: 0;
+  width: 98.6%;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+.item1{
+    color:red;
+    font-size: 20px;
+    font-weight:600;
+}
+p {font-size: 13pt;font-weight:600;}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-container > div {
+  background-color: white;
+  width: 16px;
+  margin: 2px;
+  text-align: center;
+  line-height: 16px;
+  font-size: 11px;
+}
+.btn {background:green;color:white;height:40px;width:300px;margin:auto;display:block;}
+.f-grid {display: flex;justify-content: space-between;margin-left:-0.5rem;flex-flow: row wrap;}
+.f-grid-col {flex: 3 0;background-color: hsl(240, 30%, 92%);margin-left: 0.5rem;margin-bottom: 1rem;padding: 1rem;font-size: 13pt;}
+.footer {
+        background-color: gray;
+        color: #ffffff;
+        text-align: center;
+        font-size: 12px;
+        padding: 20px;
+    }
+    
+</style>
+<script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+</script>
+<script>
+    function SubForm (){
+        $.ajax({
+            url:"https://api.apispreadsheets.com/data/19133/",
+            type:"post",
+            data:$("#myForm").serializeArray(),
+            success: function(){
+                alert("Đã nộp bài thành công :)")
+            },
+            error: function(){
+                alert("Có lỗi kĩ thuật. Hãy nộp lại... :(")
+            }
+        });
+    }
+</script>
+<!--End Goi jquery va gui tt den excel-->
+
+<script>const madethi = "101";
+const danew=["A","B","C","D","E","F"];
+const tscau=32;
+var chlbai="";
+const ngaygiobd="Oct 28, 2021 16:00:00";
+const ngaygiokt="Nov 05, 2021 17:00:00";
+var chontrllan=0;
+var ngayght="";
+</script>
+</head>
+<body>
+<form id="myForm" name="myForm">
+<div class="grid-container">
+<div class="item1">Kiểm tra GDCD-10 ngày 28/10/2021</div>
+
+<div class="item2">
+  <p id="gioThi"></p>
+  <p id="gioNay"></p>
+  <p id="thongBao"></p>
+</div>
+<div class="item3"><label for="fname">Họ & Tên Hs: </label><input name="HOTEN" value=""></div>  
+<div class="item4"><label for="lname">Lớp-Trường: </label><input name="TRUONG" value=""></div>
+<div class="item5">
+<div class="flex-container">
+
+<div id="sq1">1</div><div id="sq2">2</div><div id="sq3">3</div><div id="sq4">4</div><div id="sq5">5</div><div id="sq6">6</div><div id="sq7">7</div><div id="sq8">8</div><div id="sq9">9</div><div id="sq10">10</div><div id="sq11">11</div><div id="sq12">12</div><div id="sq13">13</div><div id="sq14">14</div><div id="sq15">15</div><div id="sq16">16</div><div id="sq17">17</div><div id="sq18">18</div><div id="sq19">19</div><div id="sq20">20</div><div id="sq21">21</div><div id="sq22">22</div><div id="sq23">23</div><div id="sq24">24</div><div id="sq25">25</div><div id="sq26">26</div><div id="sq27">27</div><div id="sq28">28</div><div id="sq29">29</div><div id="sq30">30</div><div id="sq31">31</div><div id="sq32">32</div>
+</div>
+<input type="hidden" id="C1" name="C1" value = "" >
+</div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<hr>
+<p class="clchoi" id="Q-1"><span style="color:blue">Câu 1:</span>  Khi xem xét một sự vật, hiện tượng, chúng ta cần chú ý đặt sự vật trong</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="1" name="question_1"  value="001B03A" onclick="getClassName()";> sự định kiến.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="1" name="question_1"  value="001C03B" onclick="getClassName()";> trạng thái vận động và phát triển không ngừng.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="1" name="question_1"  value="001A02C" onclick="getClassName()";> trạng thái cô lập, bất biến.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="1" name="question_1"  value="001D05D" onclick="getClassName()";> trạng thái đứng yên, không vận động.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-2"><span style="color:blue">Câu 2:</span>  Sự vận động và phát triển có mối quan hệ với nhau như thế nào?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="2" name="question_2"  value="002A02A" onclick="getClassName()";> Có vận động thì không có phát triển.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="2" name="question_2"  value="002B03B" onclick="getClassName()";> Có phát triển là không có vận động.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="2" name="question_2"  value="002D05C" onclick="getClassName()";> Vận động nào cũng là sự phát triển.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="2" name="question_2"  value="002C03D" onclick="getClassName()";> Có vận động thì mới có phát triển.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-3"><span style="color:blue">Câu 3:</span>  Sự vận động nào dưới đây không phải là sự phát triển?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="3" name="question_3"  value="003C04A" onclick="getClassName()";> Học lực yếu →học lực trung bình → học lực khá</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="3" name="question_3"  value="003A02B" onclick="getClassName()";> Bé gái → thiếu nữ →người phụ nữ trưởng thành →bà lão.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="3" name="question_3"  value="003D04C" onclick="getClassName()";> Học cách học →biết cách học.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="3" name="question_3"  value="003B03D" onclick="getClassName()";> Nước bốc hơi →mây →mưa →nước.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-4"><span style="color:blue">Câu 4:</span>  Quá trình phát triển của các sự vật, hiện tượng diễn ra theo xu hướng nào?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="4" name="question_4"  value="004B03A" onclick="getClassName()";> Đơn giản.thẳng tắp.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="4" name="question_4"  value="004A02B" onclick="getClassName()";> Nhanh chóng.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="4" name="question_4"  value="004C04C" onclick="getClassName()";> Từ từ.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="4" name="question_4"  value="004D04D" onclick="getClassName()";> Quanh co, phức tạp.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-5"><span style="color:blue">Câu 5:</span>  Xem xét sự vật hiện tượng trong sự ràng buộc lẫn nhau, có sự vận động và phát triển không ngừng là</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="5" name="question_5"  value="005D05A" onclick="getClassName()";> phương pháp luận siêu hình.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="5" name="question_5"  value="005A02B" onclick="getClassName()";> thế giới quan duy tâm</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="5" name="question_5"  value="005C04C" onclick="getClassName()";> phương pháp luận biện chứng.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="5" name="question_5"  value="005B02D" onclick="getClassName()";> thế giới quan duy vật.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-6"><span style="color:blue">Câu 6:</span>  Thế giới vật chất tồn tại khách quan, độc lập với ý thức của con người, không do ai sáng tạo ra và không ai có thể tiêu diệt được là nội dung của khái niệm nào sau đây?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="6" name="question_6"  value="006B03A" onclick="getClassName()";> Phương pháp luận siêu hình.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="6" name="question_6"  value="006A01B" onclick="getClassName()";> Thế giới quan duy vật.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="6" name="question_6"  value="006C04C" onclick="getClassName()";> Thế giới quan cổ đại.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="6" name="question_6"  value="006D05D" onclick="getClassName()";> Phương pháp luận lạc hậu.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-7"><span style="color:blue">Câu 7:</span>  Sự biến đổi nào dưới đây được coi là sự phát triển theo quan điểm Triết học?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="7" name="question_7"  value="007C04A" onclick="getClassName()";> Cây khô héo mục nát.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="7" name="question_7"  value="007A01B" onclick="getClassName()";> Sự biến đổi của sinh vật từ đơn bào đến đa bào.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="7" name="question_7"  value="007B03C" onclick="getClassName()";> Sự thoái hóa của một loài động vật theo thời gian.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="7" name="question_7"  value="007D05D" onclick="getClassName()";> Hơi nước gặp lạnh ngưng tụ thành nước.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-8"><span style="color:blue">Câu 8:</span>  Thế giới quan nào có vai trò tích cực trong việc phát triển khoa học, nâng cao vai trò của con người đối với giới tự nhiên và sự tiến bộ xã hội?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="8" name="question_8"  value="008B02A" onclick="getClassName()";> Duy vật.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="8" name="question_8"  value="008D05B" onclick="getClassName()";> Xã hội.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="8" name="question_8"  value="008A02C" onclick="getClassName()";> Duy tâm.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="8" name="question_8"  value="008C04D" onclick="getClassName()";> Tự nhiên.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-9"><span style="color:blue">Câu 9:</span>  Khẳng định nào dưới đây là không đúng về vận động?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="9" name="question_9"  value="009C04A" onclick="getClassName()";> Mặt trời không ngừng vận động.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="9" name="question_9"  value="009A02B" onclick="getClassName()";> Thế giới vật chất không ngừng vận động.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="9" name="question_9"  value="009D04C" onclick="getClassName()";> Cái bàn không vận động.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="9" name="question_9"  value="009B03D" onclick="getClassName()";> Đám mây không ngừng bay.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-10"><span style="color:blue">Câu 10:</span>  Theo quan điểm của chủ nghĩa duy vật biện chứng, phát triển theo chiều hướng vận động nào dưới đây?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="10" name="question_10"  value="010A02A" onclick="getClassName()";> Ngắt quãng.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="10" name="question_10"  value="010D04B" onclick="getClassName()";> Tiến lên.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="10" name="question_10"  value="010B03C" onclick="getClassName()";> Thụt lùi.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="10" name="question_10"  value="010C04D" onclick="getClassName()";> Tuần hoàn.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-11"><span style="color:blue">Câu 11:</span>  Trong quá trình phát triển, khuynh hướng tất yếu của sự vật, hiện tượng là</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="11" name="question_11"  value="011C04A" onclick="getClassName()";> cái sau thay thế cái trước.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="11" name="question_11"  value="011A01B" onclick="getClassName()";> cái mới ra đời thay thế cái cũ.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="11" name="question_11"  value="011B03C" onclick="getClassName()";> cái lạc hậu thay thế cái tiến bộ.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="11" name="question_11"  value="011D05D" onclick="getClassName()";> cái tốt thay thế cái xấu.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-12"><span style="color:blue">Câu 12:</span>  Thế giới quan nào có vai trò tích cực trong việc phát triển khoa học, nâng cao vai trò của con người đối với giới tự nhiên và sự tiến bộ xã hội?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="12" name="question_12"  value="012D05A" onclick="getClassName()";> Xã hội.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="12" name="question_12"  value="012C04B" onclick="getClassName()";> Tự nhiên.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="12" name="question_12"  value="012A02C" onclick="getClassName()";> Duy tâm.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="12" name="question_12"  value="012B02D" onclick="getClassName()";> Duy vật.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-13"><span style="color:blue">Câu 13:</span>  Toàn bộ những quan điểm, niềm tin định hướng hoạt động của con người trong cuộc sống là nội dung khái niệm nào sau đây?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="13" name="question_13"  value="013A02A" onclick="getClassName()";> Học thuyết.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="13" name="question_13"  value="013C04B" onclick="getClassName()";> Phương pháp luận.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="13" name="question_13"  value="013D05C" onclick="getClassName()";> Nhân sinh quan.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="13" name="question_13"  value="013B02D" onclick="getClassName()";> Thế giới quan.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-14"><span style="color:blue">Câu 14:</span>  Câu nói nào dưới đây thể hiện yếu tố siêu hình?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="14" name="question_14"  value="014C03A" onclick="getClassName()";> Nhìn mặt mà bắt hình dong.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="14" name="question_14"  value="014A02B" onclick="getClassName()";> Có công mài sắt có ngày nên kim.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="14" name="question_14"  value="014B03C" onclick="getClassName()";> Có thực mới vực được đạo.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="14" name="question_14"  value="014D05D" onclick="getClassName()";> Có bột mới gột nên hồ.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-15"><span style="color:blue">Câu 15:</span>  Các mặt đối lập của mâu thuẫn có chiều hướng phát triển như thế nào?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="15" name="question_15"  value="015C03A" onclick="getClassName()";> Trái ngược nhau.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="15" name="question_15"  value="015B03B" onclick="getClassName()";> Xung đột nhau.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="15" name="question_15"  value="015A02C" onclick="getClassName()";> Đối kháng nhau.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="15" name="question_15"  value="015D05D" onclick="getClassName()";> Đấu tranh với nhau.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-16"><span style="color:blue">Câu 16:</span>  Quan điểm nào dưới đây không phải là biểu hiện của thế giới quan duy tâm?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="16" name="question_16"  value="016A02A" onclick="getClassName()";> Chữa bệnh bằng bùa phép.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="16" name="question_16"  value="016C04B" onclick="getClassName()";> Tin một cách mù quáng vào bói toán.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="16" name="question_16"  value="016B03C" onclick="getClassName()";> Mời thầy cúng về đuối ma.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="16" name="question_16"  value="016D04D" onclick="getClassName()";> Chữa bệnh theo hướng dẫn của bác sĩ.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-17"><span style="color:blue">Câu 17:</span>  Xem xét sự vật hiện tượng trong sự ràng buộc lẫn nhau, có sự vận động và phát triển không ngừng là</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="17" name="question_17"  value="017C04A" onclick="getClassName()";> phương pháp luận biện chứng.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="17" name="question_17"  value="017B02B" onclick="getClassName()";> thế giới quan duy vật.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="17" name="question_17"  value="017A02C" onclick="getClassName()";> thế giới quan duy tâm</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="17" name="question_17"  value="017D05D" onclick="getClassName()";> phương pháp luận siêu hình.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-18"><span style="color:blue">Câu 18:</span>  Mâu thuẫn là một chỉnh thể, trong đó hai mặt đối lập vừa thống nhất</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="18" name="question_18"  value="018B03A" onclick="getClassName()";>  vừa đối kháng.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="18" name="question_18"  value="018A01B" onclick="getClassName()";>  vừa đấu tranh.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="18" name="question_18"  value="018D05C" onclick="getClassName()";>  vừa gạt bỏ.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="18" name="question_18"  value="018C04D" onclick="getClassName()";>  vừa bài trừ.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-19"><span style="color:blue">Câu 19:</span>  Câu ca dao, tục ngữ nào sau đây thể hiện yếu tố biện chứng?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="19" name="question_19"  value="019D04A" onclick="getClassName()";> Chuồn chuồn bay thấp thì mưa, bay cao thì nắng, bay vừa thì râm.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="19" name="question_19"  value="019C04B" onclick="getClassName()";> Việc của ai, người ấy làm, chẳng có ai liên quan đến ai cả.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="19" name="question_19"  value="019A02C" onclick="getClassName()";> Thầy bói xem voi.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="19" name="question_19"  value="019B03D" onclick="getClassName()";> Đèn nhà ai, nhà ấy rạng.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-20"><span style="color:blue">Câu 20:</span>  Hai mặt đối lập liên hệ gắn bó với nhau, làm tiền đề cho nhau tồn tại. Triết học gọi đó là sự</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="20" name="question_20"  value="020D05A" onclick="getClassName()";> tổng hòa giữa các mặt đối lập</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="20" name="question_20"  value="020A01B" onclick="getClassName()";> thống nhất giữa các mặt đối lập.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="20" name="question_20"  value="020B03C" onclick="getClassName()";> đấu tranh giữa các mặt đối lập.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="20" name="question_20"  value="020C04D" onclick="getClassName()";> tác động giữa các mặt đối lập.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-21"><span style="color:blue">Câu 21:</span>  Hiện tượng nào sau đây không phải là hai mặt đối lập của mâu thuẫn?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="21" name="question_21"  value="021B03A" onclick="getClassName()";> Sản xuất và tiêu dùng của nền kinh tế.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="21" name="question_21"  value="021D05B" onclick="getClassName()";> Điện tích âm và điện tích dương của một nguyên tử.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="21" name="question_21"  value="021C03C" onclick="getClassName()";> Bảng đen và phấn trắng.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="21" name="question_21"  value="021A02D" onclick="getClassName()";> Đồng hóa và dị hóa của một sinh vật.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-22"><span style="color:blue">Câu 22:</span>  Ý thức là cái có trước và là cái sản sinh ra giới tự nhiên là quan niệm của</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="22" name="question_22"  value="022A02A" onclick="getClassName()";> thế giới quan duy vật.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="22" name="question_22"  value="022B02B" onclick="getClassName()";> thế giới quan duy tâm.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="22" name="question_22"  value="022D05C" onclick="getClassName()";> phương pháp luận siêu hình.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="22" name="question_22"  value="022C04D" onclick="getClassName()";> phương pháp luận biện chứng.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-23"><span style="color:blue">Câu 23:</span>  Câu nói nào dưới đây thể hiện yếu tố siêu hình?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="23" name="question_23"  value="023B03A" onclick="getClassName()";> Có thực mới vực được đạo.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="23" name="question_23"  value="023A02B" onclick="getClassName()";> Có công mài sắt có ngày nên kim.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="23" name="question_23"  value="023D05C" onclick="getClassName()";> Có bột mới gột nên hồ.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="23" name="question_23"  value="023C03D" onclick="getClassName()";> Nhìn mặt mà bắt hình dong.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-24"><span style="color:blue">Câu 24:</span>  Căn cứ vào đâu để phân biệt thế giới quan duy vật và thế giới quan duy tâm?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="24" name="question_24"  value="024B03A" onclick="getClassName()";> Nguồn gốc con người.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="24" name="question_24"  value="024A02B" onclick="getClassName()";> Khả năng nhận thức thế giới của con người.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="24" name="question_24"  value="024C04C" onclick="getClassName()";> Sự coi trọng vật chất hay ý thức.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="24" name="question_24"  value="024D04D" onclick="getClassName()";> Mối quan hệ giữa vật chất và ý thức.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-25"><span style="color:blue">Câu 25:</span>  Hai mặt đối lập luôn tác động, bài trừ, gạt bỏ nhau. Triết học gọi đó là sự</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="25" name="question_25"  value="025A01A" onclick="getClassName()";> đấu tranh giữa các mặt đối lập.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="25" name="question_25"  value="025B03B" onclick="getClassName()";> thống nhất giữa các mặt đối lập.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="25" name="question_25"  value="025C04C" onclick="getClassName()";> xung đột giữa các mặt đối lập.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="25" name="question_25"  value="025D05D" onclick="getClassName()";> đối kháng giữa các mặt đối lập.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-26"><span style="color:blue">Câu 26:</span>  Mâu thuẫn nào dưới đây không đúng quan điểm của Triết học?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="26" name="question_26"  value="026A01A" onclick="getClassName()";> Đen – Trắng.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="26" name="question_26"  value="026C04B" onclick="getClassName()";> Sản xuất – Tiêu dùng.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="26" name="question_26"  value="026D05C" onclick="getClassName()";> Điện tích âm – Điện tích dương.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="26" name="question_26"  value="026B03D" onclick="getClassName()";> Di truyền – Biến dị.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-27"><span style="color:blue">Câu 27:</span>  Sự vật, hiện tượng tồn tại và thể hiện đặc tính của mình thông qua</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="27" name="question_27"  value="027B03A" onclick="getClassName()";> các mối quan hệ hữu cơ.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="27" name="question_27"  value="027A02B" onclick="getClassName()";> thế giới vật chất.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="27" name="question_27"  value="027D05C" onclick="getClassName()";> phát triển.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="27" name="question_27"  value="027C03D" onclick="getClassName()";> vận động.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-28"><span style="color:blue">Câu 28:</span>  Câu ca dao, tục ngữ nào sau đây thể hiện yếu tố biện chứng?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="28" name="question_28"  value="028C04A" onclick="getClassName()";> Việc của ai, người ấy làm, chẳng có ai liên quan đến ai cả.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="28" name="question_28"  value="028B03B" onclick="getClassName()";> Đèn nhà ai, nhà ấy rạng.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="28" name="question_28"  value="028D04C" onclick="getClassName()";> Chuồn chuồn bay thấp thì mưa, bay cao thì nắng, bay vừa thì râm.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="28" name="question_28"  value="028A02D" onclick="getClassName()";> Thầy bói xem voi.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-29"><span style="color:blue">Câu 29:</span>  Câu nói nổi tiếng của triết gia Hê – ra – clit: “Không ai tắm hai lần trên một dòng sông” thể híện phương pháp luận</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="29" name="question_29"  value="029C04A" onclick="getClassName()";> khoa học</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="29" name="question_29"  value="029B03B" onclick="getClassName()";> siêu hình</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="29" name="question_29"  value="029D04C" onclick="getClassName()";> biện chứng.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="29" name="question_29"  value="029A02D" onclick="getClassName()";> tự nhiên</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-30"><span style="color:blue">Câu 30:</span>  Mâu thuẫn nào dưới đây đúng với quan điểm của Triết học?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="30" name="question_30"  value="030B03A" onclick="getClassName()";> Bên phải – Bên trái.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="30" name="question_30"  value="030C04B" onclick="getClassName()";> Trên – Dưới.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="30" name="question_30"  value="030A02C" onclick="getClassName()";> Cao - Thấp.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="30" name="question_30"  value="030D04D" onclick="getClassName()";> Di truyền – Biến dị.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-31"><span style="color:blue">Câu 31:</span>  Căn cứ vào đâu để phân biệt thế giới quan duy vật và thế giới quan duy tâm?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="31" name="question_31"  value="031B03A" onclick="getClassName()";> Nguồn gốc con người.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="31" name="question_31"  value="031D04B" onclick="getClassName()";> Mối quan hệ giữa vật chất và ý thức.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="31" name="question_31"  value="031A02C" onclick="getClassName()";> Khả năng nhận thức thế giới của con người.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="31" name="question_31"  value="031C04D" onclick="getClassName()";> Sự coi trọng vật chất hay ý thức.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-32"><span style="color:blue">Câu 32:</span>  Chủ nghĩa duy vật biện chứng là sự thống nhất</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="32" name="question_32"  value="032A02A" onclick="getClassName()";> chặt chẽ giữa thế giới quan duy tâm và phương pháp luận siêu hình.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="32" name="question_32"  value="032B03B" onclick="getClassName()";> chặt chẽ giữa thế giới quan duy tâm và phương pháp luận biện chứng.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="32" name="question_32"  value="032D05C" onclick="getClassName()";> hữu cơ giữa thế giới quan duy vật và phương pháp luận siêu hình.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="32" name="question_32"  value="032C03D" onclick="getClassName()";> hữu cơ giữa thế giới quan duy vật và phương pháp luận biện chứng.</div>
+</div>
+<hr>
+</form>
+<hr>
+<br/>
+<input type="button" class="btn" value="NỘP BÀI (Nhớ nhập họ tên ở phần trên)" onclick="check()">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+  <script>
+    function getClassName(){
+        if (document.myForm.HOTEN.value==""){
+            alert("Bạn chưa điền đầy đủ các thông tin trong phần đầu!");
+            return;
+        }
+        if (document.myForm.TRUONG.value==""){
+            alert("Bạn chưa điền đầy đủ các thông tin trong phần đầu!");
+            return;
+        }
+
+        var tbdd="0";
+        var cl=event.target.className;
+        document.getElementById("sq"+cl).style.backgroundColor = "lightgreen";
+        var radioArr = document.getElementsByName("question_"+cl);
+        for(i = 0; i < radioArr.length; i++) {
+            if(radioArr[i].checked){
+              mvalue=radioArr[i].value;
+              dagoc=mvalue.slice(-4,-3);
+              hsdagoc=danew.indexOf(dagoc);
+              ktrutra=mvalue.slice(-3,-1);
+              dad=ktrutra-hsdagoc;
+              if (String(dad)==madethi.slice(-1)){
+                  tbdd="1";
+              }else{
+                  tbdd="0";
+              }
+              if (chontrllan==0){
+                ngayght=new Date();
+                chontrllan=1;
+              }  
+
+              chlbai=chlbai+"_"+radioArr[i].value+tbdd;
+            }  
+        }
+    }  
+    </script>
+    <script>
+    function check(){
+      if (document.myForm.HOTEN.value==""){
+        alert("Bạn cần điền vào Họ Tên, rồi nộp bài lại!");
+        return;
+      }
+      if (document.myForm.TRUONG.value==""){
+        alert("Bạn cần điền vào Trường Lớp rồi nộp bài lại!");
+        return;
+      }
+      var chlbailuu=chlbai;
+      var tsdiem=0;
+      var chlay="";
+      var ktrut="";
+      while (chlbai.length>0){
+        ktrut=chlbai.slice(-9);   //rut o cuoi
+        if (chlay.indexOf(ktrut.slice(0,4))<0){   //chcauso
+          chlay=chlay+ktrut;
+          tsdiem=tsdiem+parseInt(ktrut.slice(-1));  //diem cong vao la 0 hoac 1
+          chlbai=chlbai.replace(ktrut,"");
+        }
+        chlbai=chlbai.replace(ktrut,"");
+      }
+
+      var dpt=Math.round(10*tsdiem/tscau);
+      var thongbao="Điểm đạt :  " + String(dpt) + "/10. ";
+      document.getElementById("C1").value=thongbao+chlbailuu;
+      let ngaygkt=new Date();
+      document.getElementById("C1").value=thongbao+ngayght+"-"+chlbailuu+"-"+ngaygkt;
+      SubForm();
+      alert(thongbao);
+      //khoidong lai
+      chlbai="";
+      tsdiem=0;
+      chlay="";
+      //bo  all  checked  opption
+      
+      for(var j=1;j<tscau+1;j++){
+        document.getElementById("sq"+String(j)).style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+        var ele = document.getElementsByName("question_"+String(j));
+        for(var i=0;i<ele.length;i++){
+            ele[i].checked = false;
+        }
+      }
+      chedethi();
+    }
+</script>
+
+<script> 
+  //const ngaygiobd="Oct 28, 2021 09:00:00";
+  //const ngaygiokt="Oct 28, 2021 09:45:00";
+  //document.getElementById("tieude").innerHTML='KTRA GDCD '+' ('+ngaygiobd.slice(0,12)+')';
+  
+  var startThi =  new Date(ngaygiobd).getTime();
+  var endThi =    new Date(ngaygiokt).getTime();
+  var lanmode=0;
+  var lanchede=0;
+  var stoptb=0;
+  document.getElementById("gioThi").innerHTML='Giờ thi: <span style="color:blue;">'+ngaygiobd.slice(-8,-3)+'</span> - <span style="color:red;">'+ngaygiokt.slice(-8,-3)+'</span>';
+  
+    
+  var x = setInterval(function() {
+      var today = new Date();
+      var nowTimes=today.getTime();    //lay thoi gian now tinh bang  mili giay,cu 1s thilaylai
+      var time = String(today.getHours()).padStart(2,"0")+ ":" + String(today.getMinutes()).padStart(2,"0"); // + ":" + today.getSeconds();
+      document.getElementById("gioNay").innerHTML='Giờ này: <span style="color:brown;">'+time+'</span>';
+   
+      if (nowTimes<startThi && stoptb==0){
+          document.getElementById("thongBao").innerHTML='<span style="color:red;">Chưa tới giờ thi. Đề thi sẽ tự động mở khi đến giờ.<br/> Trong lúc chờ đợi, hãy điền các thông tin theo yêu cầu.</span>';
+          stoptb=stoptb+1
+            
+      }
+  
+      //1.neu-trong-gio-thi-ma-chua-mo-de-lan-nao-thi-dc-thi
+      if (nowTimes>=startThi && nowTimes<endThi && lanmode==0){
+          document.getElementById("thongBao").innerHTML='';
+          alert('Đã đến giờ thi. Hãy nhấp OK để mở đề thi và bắt đầu tính thời gian làm bài.');
+          lanmode=1;
+          hiendethi();
+          
+      }
+      if (nowTimes>=startThi && nowTimes<endThi && lanmode==1){
+        document.getElementById("thongBao").innerHTML='Còn <span style="color:red; font-size:18pt;">'+Math.round((endThi-nowTimes)/60000)+'</span> phút';
+        if (Math.round((endThi-nowTimes)/60000)==0){
+          document.getElementById("thongBao").innerHTML='<span style="color:red; font-size:18pt;">Sắp hết giờ thi!</span>';
+        }
+
+      }  
+
+      //2.het-han-thi-thi-khong-vao-thi-dc-clear
+      if (lanmode==0 && nowTimes>endThi && lanchede==0){
+          document.getElementById("thongBao").innerHTML='<span style="color:red;">ĐÃ QUA THỜI HẠN THI</span>';
+          lanchede=1;
+          
+
+        }
+      //3.neu-dang-thi-ma-het-gio-thi-nut-nop-bai-tu-dong-kich-hoat-roi-clear
+      if (lanmode==1 && nowTimes>endThi && lanchede==0){
+          alert("Đã hết giờ làm bài. Nút nộp bài sẽ tự động kích hoạt.");
+          check();
+          chedethi();
+          lanchede=1;
+          document.getElementById("thongBao").innerHTML='<span style="color:red;">Cuộc thi đã kết thúc</span>';
+      }
+  },1000);
+</script>
+
+<script>
+  function hiendethi(){
+    for (let element of document.getElementsByClassName("f-grid")){
+      element.style.visibility='visible';
+    }
+    for (let element of document.getElementsByClassName("clchoi")){
+      element.style.visibility='visible';
+    }
+    for (let element of document.getElementsByClassName("btn")){
+      element.style.visibility='visible';
+    }
+  }
+</script>
+<script>//tu  dong che khi load trang
+function chedethi(){
+  for (let element of document.getElementsByClassName("f-grid")){
+    element.style.visibility='hidden';
+  }
+  for (let element of document.getElementsByClassName("clchoi")){
+    element.style.visibility='hidden';
+  }
+  for (let element of document.getElementsByClassName("btn")){
+    element.style.visibility='hidden';
+  }
+}
+chedethi();
+</script>
+<div class="footer">
+  <p>Chú ý rằng trước khi ấn nút nộp bài, bạn phải ghi đầy đủ họ tên và lớp.</p> 
+  <p>Sau khi ấn nút thì đề thi đóng lại và sẽ hiển thị 2 thông báo kết quả.</p>
+</div>
+
+</body>
+</html>
+
