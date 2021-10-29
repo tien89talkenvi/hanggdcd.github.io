@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">jQuery(document).ready(function () {jQuery('body').bind('cut copy paste', function (e) {e.preventDefault();});jQuery("body").on("contextmenu",function(e){return false;});});jQuery(document).keydown(function (event) {if (event.keyCode == 123) {return false;}if (event.ctrlKey && event.shiftKey && event.keyCode == 67) {return false;}if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {return false;}});document.onkeydown = function(e) {if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {return false;} else {return true;}};jQuery(document).keypress("u",function(e) {if(e.ctrlKey) {return false;} else {return true;}});document.body.addEventListener('keydown', event => {if (event.ctrlKey && 'spa'.indexOf(event.key) !== -1) {event.preventDefault()}})</script>  </script>
+<title>Hang.gdcd</title>
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+ display: grid;
+  grid-template-areas:
+    'menu header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 1px;
+  background-color: #2196F3;
+  padding: 1px;
+  position: fixed;
+  top: 0;
+  width: 98.6%;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+.item1{
+    color:red;
+    font-size: 20px;
+    font-weight:600;
+}
+p {font-size: 13pt;font-weight:600;}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-container > div {
+  background-color: white;
+  width: 16px;
+  margin: 2px;
+  text-align: center;
+  line-height: 16px;
+  font-size: 11px;
+}
+.btn {background:green;color:white;height:40px;width:300px;margin:auto;display:block;}
+.f-grid {display: flex;justify-content: space-between;margin-left:-0.5rem;flex-flow: row wrap;}
+.f-grid-col {flex: 3 0;background-color: hsl(240, 30%, 92%);margin-left: 0.5rem;margin-bottom: 1rem;padding: 1rem;font-size: 13pt;}
+.footer {
+        background-color: gray;
+        color: #ffffff;
+        text-align: center;
+        font-size: 12px;
+        padding: 20px;
+    }
+    
+</style>
+<script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+</script>
+<script>
+    function SubForm (){
+        $.ajax({
+            url:"https://api.apispreadsheets.com/data/19133/",
+            type:"post",
+            data:$("#myForm").serializeArray(),
+            success: function(){
+                alert("Đã nộp bài thành công :)")
+            },
+            error: function(){
+                alert("Có lỗi kĩ thuật. Hãy nộp lại... :(")
+            }
+        });
+    }
+</script>
+<!--End Goi jquery va gui tt den excel-->
+
+<script>const madethi = "075";
+const danew=["A","B","C","D","E","F"];
+const tscau=30;
+var chlbai="";
+const ngaygiobd="Oct 28, 2021 16:00:00";
+const ngaygiokt="Nov 05, 2021 17:00:00";
+var chontrllan=0;
+var ngayght="";
+</script>
+</head>
+<body>
+<form id="myForm" name="myForm">
+<div class="grid-container">
+<div class="item1">Kiểm tra GDCD-7 ngày 28/10/2021</div>
+
+<div class="item2">
+  <p id="gioThi"></p>
+  <p id="gioNay"></p>
+  <p id="thongBao"></p>
+</div>
+<div class="item3"><label for="fname">Họ & Tên Hs: </label><input name="HOTEN" value=""></div>  
+<div class="item4"><label for="lname">Lớp-Trường: </label><input name="TRUONG" value=""></div>
+<div class="item5">
+<div class="flex-container">
+
+<div id="sq1">1</div><div id="sq2">2</div><div id="sq3">3</div><div id="sq4">4</div><div id="sq5">5</div><div id="sq6">6</div><div id="sq7">7</div><div id="sq8">8</div><div id="sq9">9</div><div id="sq10">10</div><div id="sq11">11</div><div id="sq12">12</div><div id="sq13">13</div><div id="sq14">14</div><div id="sq15">15</div><div id="sq16">16</div><div id="sq17">17</div><div id="sq18">18</div><div id="sq19">19</div><div id="sq20">20</div><div id="sq21">21</div><div id="sq22">22</div><div id="sq23">23</div><div id="sq24">24</div><div id="sq25">25</div><div id="sq26">26</div><div id="sq27">27</div><div id="sq28">28</div><div id="sq29">29</div><div id="sq30">30</div>
+</div>
+<input type="hidden" id="C1" name="C1" value = "" >
+</div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<hr>
+<p class="clchoi" id="Q-1"><span style="color:blue">Câu 1:</span>  Câu ca dao, tục ngữ nào nói về đức tính giản dị?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="1" name="question_1"  value="001C08A" onclick="getClassName()";> Ở đây một hạt cơm rơi / Ngoài kia bao hạt mồ hôi thấm đồng</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="1" name="question_1"  value="001A06B" onclick="getClassName()";> Yêu nên tốt, ghét nên xấu.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="1" name="question_1"  value="001B07C" onclick="getClassName()";> Của người bồ tát, của mình lạt buộc.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="1" name="question_1"  value="001D08D" onclick="getClassName()";> Tốt gỗ hơn tốt nước sơn.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-2"><span style="color:blue">Câu 2:</span>  Trái ngược với giản dị là</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="2" name="question_2"  value="002B07A" onclick="getClassName()";> Cần cù, siêng năng.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="2" name="question_2"  value="002D08B" onclick="getClassName()";> Tùy tiện, cẩu thả.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="2" name="question_2"  value="002C08C" onclick="getClassName()";> Không xa hoa, lãng phí.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="2" name="question_2"  value="002A06D" onclick="getClassName()";> Không cầu kì, kiểu cách.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-3"><span style="color:blue">Câu 3:</span>  Sống giản dị có ý nghĩa như thế nào đối với mỗi người?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="3" name="question_3"  value="003D09A" onclick="getClassName()";> Được mọi người giúp đỡ, quý trọng.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="3" name="question_3"  value="003C07B" onclick="getClassName()";> Được mọi người yêu mến, thông cảm và giúp đỡ.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="3" name="question_3"  value="003A06C" onclick="getClassName()";> Được mọi người kính trọng, quan tâm.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="3" name="question_3"  value="003B07D" onclick="getClassName()";> Được mọi người chia sẻ khó khăn.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-4"><span style="color:blue">Câu 4:</span>  Người có đạo đức là</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="4" name="question_4"  value="004D09A" onclick="getClassName()";> người kính trong thầy cô giáo.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="4" name="question_4"  value="004C08B" onclick="getClassName()";> truyền thống của dân tộc.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="4" name="question_4"  value="004A05C" onclick="getClassName()";> người tự giác tuân theo pháp luật.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="4" name="question_4"  value="004B07D" onclick="getClassName()";> người yêu thương mọi người.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-5"><span style="color:blue">Câu 5:</span>  Em đồng ý với ý kiến nào dưới đây?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="5" name="question_5"  value="005C08A" onclick="getClassName()";> Ăn mặc giản dị làm cho con người thiếu tự tin</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="5" name="question_5"  value="005D09B" onclick="getClassName()";> Chỉ cần có cử chỉ đơn giản trong giao tiếp, không cần phải ăn mặc, nói năng giản dị.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="5" name="question_5"  value="005A06C" onclick="getClassName()";> Gia đình nghèo thì mới cần sống giản dị.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="5" name="question_5"  value="005B06D" onclick="getClassName()";> Học sinh phổ thông, không phân biệt giàu nghèo đều phải biết sống giản dị.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-6"><span style="color:blue">Câu 6:</span>  Đạo đức là nhũng quy định, những chuẩn mực ứng xử  của</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="6" name="question_6"  value="006D09A" onclick="getClassName()";> người có lòng dũng cảm.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="6" name="question_6"  value="006A05B" onclick="getClassName()";> con người với người khác.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="6" name="question_6"  value="006C08C" onclick="getClassName()";> người có lòng yêu thương con người.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="6" name="question_6"  value="006B07D" onclick="getClassName()";> người sống có đạo đức.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-7"><span style="color:blue">Câu 7:</span>  Khẳng định nào dưới đây là đúng về lòng tự trọng?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="7" name="question_7"  value="007A06A" onclick="getClassName()";> Tự trọng là giấu những điều mà mình làm sai.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="7" name="question_7"  value="007D09B" onclick="getClassName()";> Tự trọng là từ chối sự giúp đỡ của người khác.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="7" name="question_7"  value="007B06C" onclick="getClassName()";> Tự trọng là biết coi trọng danh dự của mình.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="7" name="question_7"  value="007C08D" onclick="getClassName()";> Tự trọng là luôn đề cao cá nhân mình trước mọi người.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-8"><span style="color:blue">Câu 8:</span>  Luôn tôn trọng lẽ phải, tôn trọng chân lý đấu tranh, sống ngay thẳng là thể hiện đức tính gì?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="8" name="question_8"  value="008C08A" onclick="getClassName()";> Tự trọng.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="8" name="question_8"  value="008A06B" onclick="getClassName()";> Không lãng phí.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="8" name="question_8"  value="008D08C" onclick="getClassName()";> Trung thực.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="8" name="question_8"  value="008B07D" onclick="getClassName()";> Cần cù, siêng năng.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-9"><span style="color:blue">Câu 9:</span>  Câu ca dao, tục ngữ nào dưới đây nói về lòng tự trọng?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="9" name="question_9"  value="009B07A" onclick="getClassName()";> Một miếng khi đói bằng một gói khi no</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="9" name="question_9"  value="009C07B" onclick="getClassName()";> Nói lời phải giữ lấy lời, /đừng như con bướm đậu rồi lại bay</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="9" name="question_9"  value="009D09C" onclick="getClassName()";> Lời nói chẳng mất tiền mua,/ lựa lời mà nói cho vừa lòng nhau</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="9" name="question_9"  value="009A06D" onclick="getClassName()";> Gió chiều nào che chiều ấy.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-10"><span style="color:blue">Câu 10:</span>  Câu tục ngữ nào sau đây nói về tính không trung thực?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="10" name="question_10"  value="010B07A" onclick="getClassName()";> Dũng cảm, hi sinh quên mình.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="10" name="question_10"  value="010D09B" onclick="getClassName()";> Tay bắt mặt mừng.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="10" name="question_10"  value="010A05C" onclick="getClassName()";> Ném đá giấu tay.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="10" name="question_10"  value="010C08D" onclick="getClassName()";> Ăn ngay nói thẳng.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-11"><span style="color:blue">Câu 11:</span>  Người có đạo đức, biết tuân thủ pháp luật được</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="11" name="question_11"  value="011A06A" onclick="getClassName()";> đoàn kết, quan tâm, giúp đỡ.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="11" name="question_11"  value="011C07B" onclick="getClassName()";> mọi người tôn trọng, quý mến.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="11" name="question_11"  value="011B07C" onclick="getClassName()";> có cuộc sống ý nghĩa, tốt đẹp.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="11" name="question_11"  value="011D09D" onclick="getClassName()";> xây dựng tình đoàn kết.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-12"><span style="color:blue">Câu 12:</span>  Một trong những nội dung về ý nghĩa của đức tính tự trọng là</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="12" name="question_12"  value="012A06A" onclick="getClassName()";> khó vượt qua khó khăn để hoàn thành nhiệm vụ.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="12" name="question_12"  value="012B07B" onclick="getClassName()";> tự hạ thấp phẩm giá, uy tín cá nhân.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="12" name="question_12"  value="012C07C" onclick="getClassName()";> được mọi người tin yêu, kính trọng.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="12" name="question_12"  value="012D09D" onclick="getClassName()";> không xa hoa, lãng phí.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-13"><span style="color:blue">Câu 13:</span>  Câu tục ngữ nào nói về tính tự trọng?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="13" name="question_13"  value="013D09A" onclick="getClassName()";> Cây ngay không sợ chết đứng.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="13" name="question_13"  value="013A06B" onclick="getClassName()";> Ân trả, nghĩa đền.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="13" name="question_13"  value="013B07C" onclick="getClassName()";> Thương người như thể thương thân.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="13" name="question_13"  value="013C07D" onclick="getClassName()";> Đói cho sạch, rách cho thơm.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-14"><span style="color:blue">Câu 14:</span>  Hành vi nào không thể hiện tính tự trọng ?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="14" name="question_14"  value="014C07A" onclick="getClassName()";> Đọc sai điểm để được điểm cao.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="14" name="question_14"  value="014B07B" onclick="getClassName()";> Giữ đúng lời đã hứa với bạn.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="14" name="question_14"  value="014A06C" onclick="getClassName()";> Không bịa đặt, nói xấu người khác.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="14" name="question_14"  value="014D09D" onclick="getClassName()";> Đánh giá cao việc làm tốt của bạn.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-15"><span style="color:blue">Câu 15:</span>  Sống giản dị là sống phù hợp với</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="15" name="question_15"  value="015D09A" onclick="getClassName()";> được nuôi dạy, chăm sóc và giáo dục.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="15" name="question_15"  value="015C08B" onclick="getClassName()";> lợi ích của mình, thực hiện tốt pháp luật.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="15" name="question_15"  value="015A06C" onclick="getClassName()";> nhiệm vụ, học tập, lao động, nghỉ ngơi.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="15" name="question_15"  value="015B06D" onclick="getClassName()";> điều kiện, hoàn cảnh bản thân, gia đình, xã hội.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-16"><span style="color:blue">Câu 16:</span>  Hành vi nào thể hiện tính trung thực?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="16" name="question_16"  value="016A06A" onclick="getClassName()";> Nhận lỗi thay cho bạn.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="16" name="question_16"  value="016D09B" onclick="getClassName()";> Không nhận ra khuyết điểm của mình.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="16" name="question_16"  value="016C08C" onclick="getClassName()";> Bao che thiếu sót của người đã giúp đỡ mình.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="16" name="question_16"  value="016B06D" onclick="getClassName()";> Luôn bênh vực những người nói và làm đúng.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-17"><span style="color:blue">Câu 17:</span>  Câu tục ngữ nào sau đây nói về tính trung thực?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="17" name="question_17"  value="017B07A" onclick="getClassName()";> Thật thà là cha quỷ quái.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="17" name="question_17"  value="017A06B" onclick="getClassName()";> Hả dạ, hả lòng.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="17" name="question_17"  value="017D08C" onclick="getClassName()";> Thuốc đắng giã tật, sự thật mất lòng.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="17" name="question_17"  value="017C08D" onclick="getClassName()";> Tay bắt mặt mừng.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-18"><span style="color:blue">Câu 18:</span>  Đã nhiều lần bạn V hứa trước lớp là sẽ không nói chuyện trong giờ học. Nhiều lần nhắc nhở nhưng bạn V vẫn vi phạm lỗi. Điều đó cho thấy V là người như thế nào ?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="18" name="question_18"  value="018D08A" onclick="getClassName()";> Bạn V là người không có tự trọng.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="18" name="question_18"  value="018A06B" onclick="getClassName()";> Bạn V là người lười biếng.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="18" name="question_18"  value="018B07C" onclick="getClassName()";> Bạn V là người vô cảm, không thể sửa chữa.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="18" name="question_18"  value="018C08D" onclick="getClassName()";> Bạn V là người dối trá.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-19"><span style="color:blue">Câu 19:</span>  Hành động nào là biểu hiện của đạo đức?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="19" name="question_19"  value="019D09A" onclick="getClassName()";> Sử dụng điện thoại di động trong giờ học.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="19" name="question_19"  value="019C08B" onclick="getClassName()";> Không chấp hành quy định về an toàn giao thông.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="19" name="question_19"  value="019B06C" onclick="getClassName()";> Giúp đỡ bạn bè khi họ gặp khó khăn.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="19" name="question_19"  value="019A06D" onclick="getClassName()";> Vi phạm trong tiết kiểm tra.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-20"><span style="color:blue">Câu 20:</span>  Tục ngữ: “Cây ngay không sợ chết đứng” nói về đức tính gì ?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="20" name="question_20"  value="020C07A" onclick="getClassName()";> Trung thực.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="20" name="question_20"  value="020A06B" onclick="getClassName()";> Giản dị.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="20" name="question_20"  value="020B07C" onclick="getClassName()";> Tiết kiệm.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="20" name="question_20"  value="020D09D" onclick="getClassName()";> Khiêm tốn.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-21"><span style="color:blue">Câu 21:</span>  Em tán thành ý kiến nào dưới đây về tính trung thực?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="21" name="question_21"  value="021D08A" onclick="getClassName()";> Phải trung thực với mọi người và trung thực với chính mình.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="21" name="question_21"  value="021C08B" onclick="getClassName()";> Chỉ cần trung thực với ba mẹ.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="21" name="question_21"  value="021A06C" onclick="getClassName()";> Cần phải trung thực trong mọi trường hợp.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="21" name="question_21"  value="021B07D" onclick="getClassName()";> Có thể nói không đúng sự thật nếu như không có ai biết rõ sự thật.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-22"><span style="color:blue">Câu 22:</span>  Biểu hiện của trung thực là sống ngay thẳng, thật thà và</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="22" name="question_22"  value="022D09A" onclick="getClassName()";> trung thực chỉ ra khuyết điểm của người khác.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="22" name="question_22"  value="022B06B" onclick="getClassName()";> dám dũng cảm nhận lỗi khi mắc khuyết điểm.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="22" name="question_22"  value="022C08C" onclick="getClassName()";> khiêm tốn thừa nhận thiếu sót khi có sai lầm.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="22" name="question_22"  value="022A06D" onclick="getClassName()";> không nhận sai sót khi có khuyết điểm.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-23"><span style="color:blue">Câu 23:</span>  Bài hát “Đôi dép Bác Hồ có đoạn: Đôi dép đơn sơ, dôi dép Bác Hồ/ Bác đi từ ở chiến khu Bác về/Phố phường trận địa nhà máy đồng quê/Đều in dấu dép Bác về Bác ơi. Lời bài nói về đức tính nào của Bác.</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="23" name="question_23"  value="023A05A" onclick="getClassName()";> Giản dị.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="23" name="question_23"  value="023C08B" onclick="getClassName()";> Cần cù.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="23" name="question_23"  value="023D09C" onclick="getClassName()";> Khiêm tốn.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="23" name="question_23"  value="023B07D" onclick="getClassName()";> Tiết kiệm.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-24"><span style="color:blue">Câu 24:</span>  Tự trọng là biết coi trọng và giữ gìn phẩm cách</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="24" name="question_24"  value="024A05A" onclick="getClassName()";> biết điều chỉnh hành vi của mình.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="24" name="question_24"  value="024B07B" onclick="getClassName()";> biết tôn trọng uy tín của người khác.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="24" name="question_24"  value="024D09C" onclick="getClassName()";> biết rèn luyên, tôn trọng kỉ luật.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="24" name="question_24"  value="024C08D" onclick="getClassName()";> biết đánh giá hành vi của người khác.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-25"><span style="color:blue">Câu 25:</span>  Giữa đạo đức và kỷ luật có mối quan hệ với nhau như thế nào?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="25" name="question_25"  value="025A06A" onclick="getClassName()";> Không có mối quan hệ với nhau.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="25" name="question_25"  value="025C08B" onclick="getClassName()";> Kỷ luật có vai trò quan trọng, đạo đức không quan trọng.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="25" name="question_25"  value="025D08C" onclick="getClassName()";> Có mối quan hệ chặt chẽ với nhau.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="25" name="question_25"  value="025B07D" onclick="getClassName()";> Đạo đức có vai trò quan trọng, kỷ luật không quan trọng.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-26"><span style="color:blue">Câu 26:</span>  Hành vi nào dưới đây là biểu hiện của sự giản dị?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="26" name="question_26"  value="026C08A" onclick="getClassName()";> Không chú ý đến hình thức.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="26" name="question_26"  value="026A05B" onclick="getClassName()";> Nói năng ngắn gọn, dễ hiểu.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="26" name="question_26"  value="026D09C" onclick="getClassName()";> Xa lánh mọi người.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="26" name="question_26"  value="026B07D" onclick="getClassName()";> Tính tình dễ dãi.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-27"><span style="color:blue">Câu 27:</span>  Dù khó khăn nhưng vẫn cố gắng thực hiện lời đã hứa. Hành động đó thể hiện đức tính gì?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="27" name="question_27"  value="027C08A" onclick="getClassName()";> Chăm chỉ.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="27" name="question_27"  value="027B06B" onclick="getClassName()";> Tự trọng.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="27" name="question_27"  value="027D09C" onclick="getClassName()";> Khiêm tốn.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="27" name="question_27"  value="027A06D" onclick="getClassName()";> Thật thà.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-28"><span style="color:blue">Câu 28:</span>  Tự trọng là biết điều chỉnh hành vi của mình</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="28" name="question_28"  value="028A05A" onclick="getClassName()";> cho phù hợp chuẩn mực xã hội</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="28" name="question_28"  value="028B07B" onclick="getClassName()";> biết suy nghĩ hành động theo quy định chung.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="28" name="question_28"  value="028D09C" onclick="getClassName()";> sẽ được mọi người yêu quý và kính trọng.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="28" name="question_28"  value="028C08D" onclick="getClassName()";> biết làm những điều tốt đẹp cho người khác.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-29"><span style="color:blue">Câu 29:</span>  Hành vi nào dưới đây không phải là biểu hiện của sự giản dị?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="29" name="question_29"  value="029A06A" onclick="getClassName()";> Ủi quần áo trước khi đi học.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="29" name="question_29"  value="029C08B" onclick="getClassName()";> Luôn ăn mặc sạch sẽ, gọn gàng.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="29" name="question_29"  value="029B06C" onclick="getClassName()";> Xịt keo, làm tóc rất cầu kì trước khi đi học.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="29" name="question_29"  value="029D09D" onclick="getClassName()";> Hằng năm đều tổ chức sinh nhật.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-30"><span style="color:blue">Câu 30:</span>  Hành động nào là biểu hiện của kỉ luật?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="30" name="question_30"  value="030C08A" onclick="getClassName()";> Vượt đèn đỏ khi tham gia giao thông.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="30" name="question_30"  value="030D09B" onclick="getClassName()";> Nói chuyện trong giờ học.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="30" name="question_30"  value="030B06C" onclick="getClassName()";> Mặc đúng đồng phục khi đi học.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="30" name="question_30"  value="030A06D" onclick="getClassName()";> Không đội mũ bảo hiểm khi lái xe máy.</div>
+</div>
+<hr>
+</form>
+<hr>
+<br/>
+<input type="button" class="btn" value="NỘP BÀI (Nhớ nhập họ tên ở phần trên)" onclick="check()">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+  <script>
+    function getClassName(){
+        if (document.myForm.HOTEN.value==""){
+            alert("Bạn chưa điền đầy đủ các thông tin trong phần đầu!");
+            return;
+        }
+        if (document.myForm.TRUONG.value==""){
+            alert("Bạn chưa điền đầy đủ các thông tin trong phần đầu!");
+            return;
+        }
+
+        var tbdd="0";
+        var cl=event.target.className;
+        document.getElementById("sq"+cl).style.backgroundColor = "lightgreen";
+        var radioArr = document.getElementsByName("question_"+cl);
+        for(i = 0; i < radioArr.length; i++) {
+            if(radioArr[i].checked){
+              mvalue=radioArr[i].value;
+              dagoc=mvalue.slice(-4,-3);
+              hsdagoc=danew.indexOf(dagoc);
+              ktrutra=mvalue.slice(-3,-1);
+              dad=ktrutra-hsdagoc;
+              if (String(dad)==madethi.slice(-1)){
+                  tbdd="1";
+              }else{
+                  tbdd="0";
+              }
+              if (chontrllan==0){
+                ngayght=new Date();
+                chontrllan=1;
+              }  
+
+              chlbai=chlbai+"_"+radioArr[i].value+tbdd;
+            }  
+        }
+    }  
+    </script>
+    <script>
+    function check(){
+      if (document.myForm.HOTEN.value==""){
+        alert("Bạn cần điền vào Họ Tên, rồi nộp bài lại!");
+        return;
+      }
+      if (document.myForm.TRUONG.value==""){
+        alert("Bạn cần điền vào Trường Lớp rồi nộp bài lại!");
+        return;
+      }
+      var chlbailuu=chlbai;
+      var tsdiem=0;
+      var chlay="";
+      var ktrut="";
+      while (chlbai.length>0){
+        ktrut=chlbai.slice(-9);   //rut o cuoi
+        if (chlay.indexOf(ktrut.slice(0,4))<0){   //chcauso
+          chlay=chlay+ktrut;
+          tsdiem=tsdiem+parseInt(ktrut.slice(-1));  //diem cong vao la 0 hoac 1
+          chlbai=chlbai.replace(ktrut,"");
+        }
+        chlbai=chlbai.replace(ktrut,"");
+      }
+
+      var dpt=Math.round(10*tsdiem/tscau);
+      var thongbao="Điểm đạt :  " + String(dpt) + "/10. ";
+      document.getElementById("C1").value=thongbao+chlbailuu;
+      let ngaygkt=new Date();
+      document.getElementById("C1").value=thongbao+ngayght+"-"+chlbailuu+"-"+ngaygkt;
+      SubForm();
+      alert(thongbao);
+      //khoidong lai
+      chlbai="";
+      tsdiem=0;
+      chlay="";
+      //bo  all  checked  opption
+      
+      for(var j=1;j<tscau+1;j++){
+        document.getElementById("sq"+String(j)).style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+        var ele = document.getElementsByName("question_"+String(j));
+        for(var i=0;i<ele.length;i++){
+            ele[i].checked = false;
+        }
+      }
+      chedethi();
+    }
+</script>
+
+<script> 
+  //const ngaygiobd="Oct 28, 2021 09:00:00";
+  //const ngaygiokt="Oct 28, 2021 09:45:00";
+  //document.getElementById("tieude").innerHTML='KTRA GDCD '+' ('+ngaygiobd.slice(0,12)+')';
+  
+  var startThi =  new Date(ngaygiobd).getTime();
+  var endThi =    new Date(ngaygiokt).getTime();
+  var lanmode=0;
+  var lanchede=0;
+  var stoptb=0;
+  document.getElementById("gioThi").innerHTML='Giờ thi: <span style="color:blue;">'+ngaygiobd.slice(-8,-3)+'</span> - <span style="color:red;">'+ngaygiokt.slice(-8,-3)+'</span>';
+  
+    
+  var x = setInterval(function() {
+      var today = new Date();
+      var nowTimes=today.getTime();    //lay thoi gian now tinh bang  mili giay,cu 1s thilaylai
+      var time = String(today.getHours()).padStart(2,"0")+ ":" + String(today.getMinutes()).padStart(2,"0"); // + ":" + today.getSeconds();
+      document.getElementById("gioNay").innerHTML='Giờ này: <span style="color:brown;">'+time+'</span>';
+   
+      if (nowTimes<startThi && stoptb==0){
+          document.getElementById("thongBao").innerHTML='<span style="color:red;">Chưa tới giờ thi. Đề thi sẽ tự động mở khi đến giờ.<br/> Trong lúc chờ đợi, hãy điền các thông tin theo yêu cầu.</span>';
+          stoptb=stoptb+1
+            
+      }
+  
+      //1.neu-trong-gio-thi-ma-chua-mo-de-lan-nao-thi-dc-thi
+      if (nowTimes>=startThi && nowTimes<endThi && lanmode==0){
+          document.getElementById("thongBao").innerHTML='';
+          alert('Đã đến giờ thi. Hãy nhấp OK để mở đề thi và bắt đầu tính thời gian làm bài.');
+          lanmode=1;
+          hiendethi();
+          
+      }
+      if (nowTimes>=startThi && nowTimes<endThi && lanmode==1){
+        document.getElementById("thongBao").innerHTML='Còn <span style="color:red; font-size:18pt;">'+Math.round((endThi-nowTimes)/60000)+'</span> phút';
+        if (Math.round((endThi-nowTimes)/60000)==0){
+          document.getElementById("thongBao").innerHTML='<span style="color:red; font-size:18pt;">Sắp hết giờ thi!</span>';
+        }
+
+      }  
+
+      //2.het-han-thi-thi-khong-vao-thi-dc-clear
+      if (lanmode==0 && nowTimes>endThi && lanchede==0){
+          document.getElementById("thongBao").innerHTML='<span style="color:red;">ĐÃ QUA THỜI HẠN THI</span>';
+          lanchede=1;
+          
+
+        }
+      //3.neu-dang-thi-ma-het-gio-thi-nut-nop-bai-tu-dong-kich-hoat-roi-clear
+      if (lanmode==1 && nowTimes>endThi && lanchede==0){
+          alert("Đã hết giờ làm bài. Nút nộp bài sẽ tự động kích hoạt.");
+          check();
+          chedethi();
+          lanchede=1;
+          document.getElementById("thongBao").innerHTML='<span style="color:red;">Cuộc thi đã kết thúc</span>';
+      }
+  },1000);
+</script>
+
+<script>
+  function hiendethi(){
+    for (let element of document.getElementsByClassName("f-grid")){
+      element.style.visibility='visible';
+    }
+    for (let element of document.getElementsByClassName("clchoi")){
+      element.style.visibility='visible';
+    }
+    for (let element of document.getElementsByClassName("btn")){
+      element.style.visibility='visible';
+    }
+  }
+</script>
+<script>//tu  dong che khi load trang
+function chedethi(){
+  for (let element of document.getElementsByClassName("f-grid")){
+    element.style.visibility='hidden';
+  }
+  for (let element of document.getElementsByClassName("clchoi")){
+    element.style.visibility='hidden';
+  }
+  for (let element of document.getElementsByClassName("btn")){
+    element.style.visibility='hidden';
+  }
+}
+chedethi();
+</script>
+<div class="footer">
+  <p>Chú ý rằng trước khi ấn nút nộp bài, bạn phải ghi đầy đủ họ tên và lớp.</p> 
+  <p>Sau khi ấn nút thì đề thi đóng lại và sẽ hiển thị 2 thông báo kết quả.</p>
+</div>
+
+</body>
+</html>
+
