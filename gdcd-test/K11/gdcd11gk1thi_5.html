@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">jQuery(document).ready(function () {jQuery('body').bind('cut copy paste', function (e) {e.preventDefault();});jQuery("body").on("contextmenu",function(e){return false;});});jQuery(document).keydown(function (event) {if (event.keyCode == 123) {return false;}if (event.ctrlKey && event.shiftKey && event.keyCode == 67) {return false;}if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {return false;}});document.onkeydown = function(e) {if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {return false;} else {return true;}};jQuery(document).keypress("u",function(e) {if(e.ctrlKey) {return false;} else {return true;}});document.body.addEventListener('keydown', event => {if (event.ctrlKey && 'spa'.indexOf(event.key) !== -1) {event.preventDefault()}})</script>  </script>
+<title>Hang.gdcd</title>
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+ display: grid;
+  grid-template-areas:
+    'menu header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 1px;
+  background-color: #2196F3;
+  padding: 1px;
+  position: fixed;
+  top: 0;
+  width: 98.6%;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+.item1{
+    color:red;
+    font-size: 20px;
+    font-weight:600;
+}
+p {font-size: 13pt;font-weight:600;}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-container > div {
+  background-color: white;
+  width: 16px;
+  margin: 2px;
+  text-align: center;
+  line-height: 16px;
+  font-size: 11px;
+}
+.btn {background:green;color:white;height:40px;width:300px;margin:auto;display:block;}
+.f-grid {display: flex;justify-content: space-between;margin-left:-0.5rem;flex-flow: row wrap;}
+.f-grid-col {flex: 3 0;background-color: hsl(240, 30%, 92%);margin-left: 0.5rem;margin-bottom: 1rem;padding: 1rem;font-size: 13pt;}
+.footer {
+        background-color: gray;
+        color: #ffffff;
+        text-align: center;
+        font-size: 12px;
+        padding: 20px;
+    }
+    
+</style>
+<script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+</script>
+<script>
+    function SubForm (){
+        $.ajax({
+            url:"https://api.apispreadsheets.com/data/19133/",
+            type:"post",
+            data:$("#myForm").serializeArray(),
+            success: function(){
+                alert("Đã nộp bài thành công :)")
+            },
+            error: function(){
+                alert("Có lỗi kĩ thuật. Hãy nộp lại... :(")
+            }
+        });
+    }
+</script>
+<!--End Goi jquery va gui tt den excel-->
+
+<script>const madethi = "115";
+const danew=["A","B","C","D","E","F"];
+const tscau=30;
+var chlbai="";
+const ngaygiobd="Oct 28, 2021 16:00:00";
+const ngaygiokt="Nov 05, 2021 17:00:00";
+var chontrllan=0;
+var ngayght="";
+</script>
+</head>
+<body>
+<form id="myForm" name="myForm">
+<div class="grid-container">
+<div class="item1">Kiểm tra GDCD-11 ngày 28/10/2021</div>
+
+<div class="item2">
+  <p id="gioThi"></p>
+  <p id="gioNay"></p>
+  <p id="thongBao"></p>
+</div>
+<div class="item3"><label for="fname">Họ & Tên Hs: </label><input name="HOTEN" value=""></div>  
+<div class="item4"><label for="lname">Lớp-Trường: </label><input name="TRUONG" value=""></div>
+<div class="item5">
+<div class="flex-container">
+
+<div id="sq1">1</div><div id="sq2">2</div><div id="sq3">3</div><div id="sq4">4</div><div id="sq5">5</div><div id="sq6">6</div><div id="sq7">7</div><div id="sq8">8</div><div id="sq9">9</div><div id="sq10">10</div><div id="sq11">11</div><div id="sq12">12</div><div id="sq13">13</div><div id="sq14">14</div><div id="sq15">15</div><div id="sq16">16</div><div id="sq17">17</div><div id="sq18">18</div><div id="sq19">19</div><div id="sq20">20</div><div id="sq21">21</div><div id="sq22">22</div><div id="sq23">23</div><div id="sq24">24</div><div id="sq25">25</div><div id="sq26">26</div><div id="sq27">27</div><div id="sq28">28</div><div id="sq29">29</div><div id="sq30">30</div>
+</div>
+<input type="hidden" id="C1" name="C1" value = "" >
+</div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<hr>
+<p class="clchoi" id="Q-1"><span style="color:blue">Câu 1:</span>  Vật phẩm nào dưới đây không phải là hàng hóa?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="1" name="question_1"  value="001A06A" onclick="getClassName()";> Điện</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="1" name="question_1"  value="001B07B" onclick="getClassName()";> Nước máy</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="1" name="question_1"  value="001C07C" onclick="getClassName()";> Không khí</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="1" name="question_1"  value="001D09D" onclick="getClassName()";> Rau trồng để bán</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-2"><span style="color:blue">Câu 2:</span>  Thị trường gồm những nhân tố cơ bản nào dưới đây?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="2" name="question_2"  value="002A05A" onclick="getClassName()";> Hàng hóa, tiền tệ, người mua, người bán.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="2" name="question_2"  value="002B07B" onclick="getClassName()";> Người mua, tiền tệ, giá cả.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="2" name="question_2"  value="002D09C" onclick="getClassName()";> Tiền tệ, người mua, người bán, giá cả.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="2" name="question_2"  value="002C08D" onclick="getClassName()";> Giá cả, hàng hóa, người mua, người bán.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-3"><span style="color:blue">Câu 3:</span>  “Con trâu đi trước, cái cày theo sau” là nói đến yếu tố nào dưới đây trong quá trình lao động?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="3" name="question_3"  value="003A06A" onclick="getClassName()";> Đối tượng lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="3" name="question_3"  value="003B06B" onclick="getClassName()";> Tư liệu lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="3" name="question_3"  value="003C08C" onclick="getClassName()";> Sức lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="3" name="question_3"  value="003D09D" onclick="getClassName()";> Nguyên liệu lao động.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-4"><span style="color:blue">Câu 4:</span>  Các yếu tố cơ bản của quá trình sản xuất bao gồm</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="4" name="question_4"  value="004C08A" onclick="getClassName()";> sức lao động, công cụ lao động, tư liệu sinh hoạt.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="4" name="question_4"  value="004B07B" onclick="getClassName()";> sức lao động, đối tượng sản xuất, tư liệu vật chất,</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="4" name="question_4"  value="004A05C" onclick="getClassName()";> sức lao động, đối tượng lao động, tư liệu lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="4" name="question_4"  value="004D09D" onclick="getClassName()";> sức lao động, công cụ sản xuất, tư liệu lao động.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-5"><span style="color:blue">Câu 5:</span>  Theo Các Mác, chúng ta có thể dựa vào đâu để phân biệt các thời đại kinh tế?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="5" name="question_5"  value="005B07A" onclick="getClassName()";>  Tư liệu lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="5" name="question_5"  value="005C08B" onclick="getClassName()";> Sức lao động</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="5" name="question_5"  value="005A06C" onclick="getClassName()";> Đối tượng lao động</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="5" name="question_5"  value="005D08D" onclick="getClassName()";> Công cụ lao động.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-6"><span style="color:blue">Câu 6:</span>  Sức lao động của con người bao gồm năng lực gì?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="6" name="question_6"  value="006B07A" onclick="getClassName()";> Tinh thần và mục đích.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="6" name="question_6"  value="006C08B" onclick="getClassName()";> Vật chất và tinh thần.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="6" name="question_6"  value="006D08C" onclick="getClassName()";> Thể chất và tinh thần.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="6" name="question_6"  value="006A06D" onclick="getClassName()";> Vật chất và lao động.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-7"><span style="color:blue">Câu 7:</span>  Giá trị của hàng hóa là</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="7" name="question_7"  value="007B06A" onclick="getClassName()";> lao động xã hội của người sản xuất hàng hóa kết tinh trong hàng hóa.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="7" name="question_7"  value="007D09B" onclick="getClassName()";> sức lao động của người sản xuất hàng hóa kết tinh trong hàng hóa.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="7" name="question_7"  value="007A06C" onclick="getClassName()";> lao động  người sản xuất hàng hóa kết tinh trong hàng hóa.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="7" name="question_7"  value="007C08D" onclick="getClassName()";> chi phí làm ra hàng hóa đó.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-8"><span style="color:blue">Câu 8:</span>  Vì sao sức lao động giữ vai trò quan trọng nhất trong các yếu tố cơ bản của quá trình sản xuất?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="8" name="question_8"  value="008A05A" onclick="getClassName()";> Sức lao động có tính sáng tạo.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="8" name="question_8"  value="008B07B" onclick="getClassName()";> Sức lao động của mỗi người khác nhau.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="8" name="question_8"  value="008D09C" onclick="getClassName()";> Giúp con người xây dựng hạnh phúc.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="8" name="question_8"  value="008C08D" onclick="getClassName()";> Phản ánh sức lao động của con người.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-9"><span style="color:blue">Câu 9:</span>  Giá trị sử dụng của hàng hóa là</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="9" name="question_9"  value="009A05A" onclick="getClassName()";> công dụng của sản phẩm thỏa mãn nhu cầu nào đó của con người.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="9" name="question_9"  value="009B07B" onclick="getClassName()";> sản phẩm thỏa mãn như cầu của con người.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="9" name="question_9"  value="009D09C" onclick="getClassName()";> lao động của người sản xuất hàng hóa kết tinh trong hàng hóa.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="9" name="question_9"  value="009C08D" onclick="getClassName()";> cơ sở của giá trị trao đổi hàng hóa.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-10"><span style="color:blue">Câu 10:</span>  Bà An làm đất trồng rau để bán ra thị trường. Quá trình đó được gọi là</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="10" name="question_10"  value="010A06A" onclick="getClassName()";> sản xuất kinh tế.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="10" name="question_10"  value="010D08B" onclick="getClassName()";> quá trình sản xuất.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="10" name="question_10"  value="010B07C" onclick="getClassName()";> thỏa mãn nhu cầu.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="10" name="question_10"  value="010C08D" onclick="getClassName()";> sản xuất của cải vật chất.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-11"><span style="color:blue">Câu 11:</span>  Tiền được dùng để chi trả sau khi giao dịch, mua bán. Khi đó tiền thực hiện chức năng gì dưới đây?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="11" name="question_11"  value="011B07A" onclick="getClassName()";> Phương tiện lưu thông</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="11" name="question_11"  value="011D08B" onclick="getClassName()";> Phương tiện thanh toán.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="11" name="question_11"  value="011C08C" onclick="getClassName()";> Phương tiện cất trữ</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="11" name="question_11"  value="011A06D" onclick="getClassName()";> Thước đo giá trị</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-12"><span style="color:blue">Câu 12:</span>  Công ty X trang bị máy móc hiện đại vào sản xuất, làm cho năng suất lao động tăng lên. Công ty X đã chú trọng yếu tố nào trong quá trình sản xuất?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="12" name="question_12"  value="012D09A" onclick="getClassName()";> Đổi mới tư duy.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="12" name="question_12"  value="012A06B" onclick="getClassName()";>  Phát triển kinh tế</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="12" name="question_12"  value="012C08C" onclick="getClassName()";>  Đối tượng lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="12" name="question_12"  value="012B06D" onclick="getClassName()";> Tư liệu lao động.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-13"><span style="color:blue">Câu 13:</span>  Trong quá trình sản xuất, đối tượng lao động và tư liệu lao động kết hợp lại thành</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="13" name="question_13"  value="013B06A" onclick="getClassName()";> tư liệu sản xuất.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="13" name="question_13"  value="013D09B" onclick="getClassName()";> hệ thống bình chứa.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="13" name="question_13"  value="013A06C" onclick="getClassName()";> sức lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="13" name="question_13"  value="013C08D" onclick="getClassName()";> công cụ lao động.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-14"><span style="color:blue">Câu 14:</span>  Trong tư liệu lao động, bộ phận quyết định đến năng suất lao động là yếu tố</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="14" name="question_14"  value="014B07A" onclick="getClassName()";> hệ thống bình chứa</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="14" name="question_14"  value="014D08B" onclick="getClassName()";> công cụ lao động,</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="14" name="question_14"  value="014C08C" onclick="getClassName()";>   nguyên vật liệu</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="14" name="question_14"  value="014A06D" onclick="getClassName()";>  Kết cấu hạ tầng</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-15"><span style="color:blue">Câu 15:</span>  Chị H vừa mua chiếc áo khoác và khoe với bạn rằng áo có chất liệu bền, màu sắc đẹp phù hợp với lứa tuổi, chắc người tạo ra nó có tính thẩm mỹ cao. Nhận xét của chị H về chiếc áo  đã thể hiện thuộc tính nào hàng hoá?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="15" name="question_15"  value="015D09A" onclick="getClassName()";> Lượng giá trị.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="15" name="question_15"  value="015C07B" onclick="getClassName()";> Giá trị sử dụng.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="15" name="question_15"  value="015A06C" onclick="getClassName()";> Giá trị.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="15" name="question_15"  value="015B07D" onclick="getClassName()";> Giá cả.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-16"><span style="color:blue">Câu 16:</span>  Kỳ nghỉ hè năm nay P tham gia vào tua tham quan Hà Nội – Đà Nẵng – Thành phố Hồ Chí Minh. Vậy P đã tiêu dùng hàng hoá ở dạng nào sau đây?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="16" name="question_16"  value="016D08A" onclick="getClassName()";> Dịch vụ.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="16" name="question_16"  value="016A06B" onclick="getClassName()";> Dạng vật thể.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="16" name="question_16"  value="016B07C" onclick="getClassName()";> Hữu hình.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="16" name="question_16"  value="016C08D" onclick="getClassName()";> Không xác định.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-17"><span style="color:blue">Câu 17:</span>  Hai hàng hóa có thể trao đổi được với nhau vì</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="17" name="question_17"  value="017C08A" onclick="getClassName()";> chúng có giá trị bằng nhau.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="17" name="question_17"  value="017A06B" onclick="getClassName()";> chúng đều có giá trị và giá trị sử dụng.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="17" name="question_17"  value="017B07C" onclick="getClassName()";> chúng có giá trị sử dụng khác nhau.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="17" name="question_17"  value="017D08D" onclick="getClassName()";> chúng đều là sản phẩm của lao động.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-18"><span style="color:blue">Câu 18:</span>   Sản xuất của cải vật chất là quá trình con người tác động vào tự nhiên để tạo ra</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="18" name="question_18"  value="018D09A" onclick="getClassName()";> cơm ăn, áo mặc và tư liệu sản xuất.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="18" name="question_18"  value="018B06B" onclick="getClassName()";> các sản phẩm phù hợp với nhu cầu.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="18" name="question_18"  value="018A06C" onclick="getClassName()";> của cải vật chất theo ý muốn.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="18" name="question_18"  value="018C08D" onclick="getClassName()";> các vật phẩm hợp với nhu cầu.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-19"><span style="color:blue">Câu 19:</span>  Hàng hóa có hai thuộc tính là</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="19" name="question_19"  value="019A06A" onclick="getClassName()";> giá trị và giá cả</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="19" name="question_19"  value="019C08B" onclick="getClassName()";> giá cả và giá trị sử dụng</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="19" name="question_19"  value="019B07C" onclick="getClassName()";> giá trị trao đổi và giá trị sử dụng</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="19" name="question_19"  value="019D08D" onclick="getClassName()";> giá trị và giá trị sử dụng</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-20"><span style="color:blue">Câu 20:</span>  Lao động của con người là dạng hoạt động gì?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="20" name="question_20"  value="020B07A" onclick="getClassName()";> Hoạt động vô thức.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="20" name="question_20"  value="020D09B" onclick="getClassName()";> Hoạt động để thỏa mãn nhu cầu.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="20" name="question_20"  value="020C07C" onclick="getClassName()";> Hoạt động có mục đích, có ý thức.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="20" name="question_20"  value="020A06D" onclick="getClassName()";> Hoạt động bản năng.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-21"><span style="color:blue">Câu 21:</span>  Tiền thực hiện chức năng thước đo giá trị khi</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="21" name="question_21"  value="021A05A" onclick="getClassName()";> tiền dùng để đo lường và biểu hiện giá trị của hàng hóa.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="21" name="question_21"  value="021C08B" onclick="getClassName()";> tiền được dùng để chi trả sau khi giao dịch.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="21" name="question_21"  value="021B07C" onclick="getClassName()";> tiền làm môi giới trong quá trình trao đổi hàng hóa.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="21" name="question_21"  value="021D09D" onclick="getClassName()";> tiền dùng để cất trữ.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-22"><span style="color:blue">Câu 22:</span>  Sự tiêu dùng sức lao động trong hiện thực là</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="22" name="question_22"  value="022C08A" onclick="getClassName()";> người lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="22" name="question_22"  value="022D09B" onclick="getClassName()";> hoạt động.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="22" name="question_22"  value="022A06C" onclick="getClassName()";> sức lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="22" name="question_22"  value="022B06D" onclick="getClassName()";> lao động.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-23"><span style="color:blue">Câu 23:</span>  Trong tư liệu lao động, bộ phận quyết định đến năng suất lao động là yếu tố</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="23" name="question_23"  value="023A06A" onclick="getClassName()";>  Kết cấu hạ tầng</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="23" name="question_23"  value="023D08B" onclick="getClassName()";> công cụ lao động,</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="23" name="question_23"  value="023C08C" onclick="getClassName()";> nguyên vật liệu</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="23" name="question_23"  value="023B07D" onclick="getClassName()";> hệ thống bình chứa</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-24"><span style="color:blue">Câu 24:</span>  Sản xuất của cải vật chất giữ vai trò gì đối với sự tồn tại của xã hội?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="24" name="question_24"  value="024C07A" onclick="getClassName()";> Là cơ sở.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="24" name="question_24"  value="024D09B" onclick="getClassName()";> Là đòn bẩy.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="24" name="question_24"  value="024A06C" onclick="getClassName()";> Là động lực.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="24" name="question_24"  value="024B07D" onclick="getClassName()";> Là điều kiện.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-25"><span style="color:blue">Câu 25:</span>  Hoạt động có mục đích, có ý thức của con người làm biến đổi những yếu tố của tự nhiên cho phù hợp với nhu cầu của con người được gọi là gì?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="25" name="question_25"  value="025B07A" onclick="getClassName()";> Hành động lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="25" name="question_25"  value="025C08B" onclick="getClassName()";> Tác động của lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="25" name="question_25"  value="025D08C" onclick="getClassName()";> Lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="25" name="question_25"  value="025A06D" onclick="getClassName()";> Sản xuất của cải vật chất.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-26"><span style="color:blue">Câu 26:</span>   Một trong những vai trò của sản xuất của cải vật chất là</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="26" name="question_26"  value="026A05A" onclick="getClassName()";> cơ sở tồn tại và phát triển của xã hội.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="26" name="question_26"  value="026D09B" onclick="getClassName()";> thúc đẩy tăng trưởng kinh tế.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="26" name="question_26"  value="026B07C" onclick="getClassName()";> tạo ra các giá trị vật chất và tinh thần.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="26" name="question_26"  value="026C08D" onclick="getClassName()";> giúp con người có việc làm.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-27"><span style="color:blue">Câu 27:</span>  Trong các yếu tố của quá trình sản xuất, yếu tố nào là quan trọng nhất?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="27" name="question_27"  value="027A06A" onclick="getClassName()";> Tư liệu sản xuất.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="27" name="question_27"  value="027D08B" onclick="getClassName()";> Sức lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="27" name="question_27"  value="027B07C" onclick="getClassName()";> Đối tượng lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="27" name="question_27"  value="027C08D" onclick="getClassName()";> Tư liệu lao động.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-28"><span style="color:blue">Câu 28:</span>  Đường xá, bến cảng, sân bay, hệ thống thông tin liên lạc trong sản xuất được gọi là</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="28" name="question_28"  value="028A06A" onclick="getClassName()";> tư liệu sản xuất</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="28" name="question_28"  value="028C08B" onclick="getClassName()";> hệ thống giao thông.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="28" name="question_28"  value="028D08C" onclick="getClassName()";> kết cấu hạ tầng.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="28" name="question_28"  value="028B07D" onclick="getClassName()";> công cụ lao động.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-29"><span style="color:blue">Câu 29:</span>  Nước biển được những người nông dân bơm lên ruộng, phơi nắng tạo thành muối ăn. Như vậy, trong trường hợp này nước biển được gọi là yếu tố nào sau đây?</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="29" name="question_29"  value="029D09A" onclick="getClassName()";> Tài nguyên thiên nhiên.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="29" name="question_29"  value="029C07B" onclick="getClassName()";> Đối tượng lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="29" name="question_29"  value="029A06C" onclick="getClassName()";> Tư liệu lao động.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="29" name="question_29"  value="029B07D" onclick="getClassName()";> Công cụ lao động.</div>
+</div>
+<hr>
+</form>
+<p class="clchoi" id="Q-30"><span style="color:blue">Câu 30:</span>  Trên thị trường, các chủ thể kinh tế tác động qua lại lẫn nhau để xác định</p>
+<div class="f-grid">
+<div class="f-grid-col" ><span style="color:green;">A</span><input type="radio" class="30" name="question_30"  value="030A06A" onclick="getClassName()";> chất lượng và số lượng hàng hóa.</div>
+<div class="f-grid-col" ><span style="color:green;">B</span><input type="radio" class="30" name="question_30"  value="030B07B" onclick="getClassName()";> gía trị và giá trị sử dụng của hàng hóa.</div>
+<div class="f-grid-col" ><span style="color:green;">C</span><input type="radio" class="30" name="question_30"  value="030D08C" onclick="getClassName()";> giá cả và số lượng hàng hóa.</div>
+<div class="f-grid-col" ><span style="color:green;">D</span><input type="radio" class="30" name="question_30"  value="030C08D" onclick="getClassName()";> giá cả và giá trị sử dụng của hàng hóa.</div>
+</div>
+<hr>
+</form>
+<hr>
+<br/>
+<input type="button" class="btn" value="NỘP BÀI (Nhớ nhập họ tên ở phần trên)" onclick="check()">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+  <script>
+    function getClassName(){
+        if (document.myForm.HOTEN.value==""){
+            alert("Bạn chưa điền đầy đủ các thông tin trong phần đầu!");
+            return;
+        }
+        if (document.myForm.TRUONG.value==""){
+            alert("Bạn chưa điền đầy đủ các thông tin trong phần đầu!");
+            return;
+        }
+
+        var tbdd="0";
+        var cl=event.target.className;
+        document.getElementById("sq"+cl).style.backgroundColor = "lightgreen";
+        var radioArr = document.getElementsByName("question_"+cl);
+        for(i = 0; i < radioArr.length; i++) {
+            if(radioArr[i].checked){
+              mvalue=radioArr[i].value;
+              dagoc=mvalue.slice(-4,-3);
+              hsdagoc=danew.indexOf(dagoc);
+              ktrutra=mvalue.slice(-3,-1);
+              dad=ktrutra-hsdagoc;
+              if (String(dad)==madethi.slice(-1)){
+                  tbdd="1";
+              }else{
+                  tbdd="0";
+              }
+              if (chontrllan==0){
+                ngayght=new Date();
+                chontrllan=1;
+              }  
+
+              chlbai=chlbai+"_"+radioArr[i].value+tbdd;
+            }  
+        }
+    }  
+    </script>
+    <script>
+    function check(){
+      if (document.myForm.HOTEN.value==""){
+        alert("Bạn cần điền vào Họ Tên, rồi nộp bài lại!");
+        return;
+      }
+      if (document.myForm.TRUONG.value==""){
+        alert("Bạn cần điền vào Trường Lớp rồi nộp bài lại!");
+        return;
+      }
+      var chlbailuu=chlbai;
+      var tsdiem=0;
+      var chlay="";
+      var ktrut="";
+      while (chlbai.length>0){
+        ktrut=chlbai.slice(-9);   //rut o cuoi
+        if (chlay.indexOf(ktrut.slice(0,4))<0){   //chcauso
+          chlay=chlay+ktrut;
+          tsdiem=tsdiem+parseInt(ktrut.slice(-1));  //diem cong vao la 0 hoac 1
+          chlbai=chlbai.replace(ktrut,"");
+        }
+        chlbai=chlbai.replace(ktrut,"");
+      }
+
+      var dpt=Math.round(10*tsdiem/tscau);
+      var thongbao="Điểm đạt :  " + String(dpt) + "/10. ";
+      document.getElementById("C1").value=thongbao+chlbailuu;
+      let ngaygkt=new Date();
+      document.getElementById("C1").value=thongbao+ngayght+"-"+chlbailuu+"-"+ngaygkt;
+      SubForm();
+      alert(thongbao);
+      //khoidong lai
+      chlbai="";
+      tsdiem=0;
+      chlay="";
+      //bo  all  checked  opption
+      
+      for(var j=1;j<tscau+1;j++){
+        document.getElementById("sq"+String(j)).style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+        var ele = document.getElementsByName("question_"+String(j));
+        for(var i=0;i<ele.length;i++){
+            ele[i].checked = false;
+        }
+      }
+      chedethi();
+    }
+</script>
+
+<script> 
+  //const ngaygiobd="Oct 28, 2021 09:00:00";
+  //const ngaygiokt="Oct 28, 2021 09:45:00";
+  //document.getElementById("tieude").innerHTML='KTRA GDCD '+' ('+ngaygiobd.slice(0,12)+')';
+  
+  var startThi =  new Date(ngaygiobd).getTime();
+  var endThi =    new Date(ngaygiokt).getTime();
+  var lanmode=0;
+  var lanchede=0;
+  var stoptb=0;
+  document.getElementById("gioThi").innerHTML='Giờ thi: <span style="color:blue;">'+ngaygiobd.slice(-8,-3)+'</span> - <span style="color:red;">'+ngaygiokt.slice(-8,-3)+'</span>';
+  
+    
+  var x = setInterval(function() {
+      var today = new Date();
+      var nowTimes=today.getTime();    //lay thoi gian now tinh bang  mili giay,cu 1s thilaylai
+      var time = String(today.getHours()).padStart(2,"0")+ ":" + String(today.getMinutes()).padStart(2,"0"); // + ":" + today.getSeconds();
+      document.getElementById("gioNay").innerHTML='Giờ này: <span style="color:brown;">'+time+'</span>';
+   
+      if (nowTimes<startThi && stoptb==0){
+          document.getElementById("thongBao").innerHTML='<span style="color:red;">Chưa tới giờ thi. Đề thi sẽ tự động mở khi đến giờ.<br/> Trong lúc chờ đợi, hãy điền các thông tin theo yêu cầu.</span>';
+          stoptb=stoptb+1
+            
+      }
+  
+      //1.neu-trong-gio-thi-ma-chua-mo-de-lan-nao-thi-dc-thi
+      if (nowTimes>=startThi && nowTimes<endThi && lanmode==0){
+          document.getElementById("thongBao").innerHTML='';
+          alert('Đã đến giờ thi. Hãy nhấp OK để mở đề thi và bắt đầu tính thời gian làm bài.');
+          lanmode=1;
+          hiendethi();
+          
+      }
+      if (nowTimes>=startThi && nowTimes<endThi && lanmode==1){
+        document.getElementById("thongBao").innerHTML='Còn <span style="color:red; font-size:18pt;">'+Math.round((endThi-nowTimes)/60000)+'</span> phút';
+        if (Math.round((endThi-nowTimes)/60000)==0){
+          document.getElementById("thongBao").innerHTML='<span style="color:red; font-size:18pt;">Sắp hết giờ thi!</span>';
+        }
+
+      }  
+
+      //2.het-han-thi-thi-khong-vao-thi-dc-clear
+      if (lanmode==0 && nowTimes>endThi && lanchede==0){
+          document.getElementById("thongBao").innerHTML='<span style="color:red;">ĐÃ QUA THỜI HẠN THI</span>';
+          lanchede=1;
+          
+
+        }
+      //3.neu-dang-thi-ma-het-gio-thi-nut-nop-bai-tu-dong-kich-hoat-roi-clear
+      if (lanmode==1 && nowTimes>endThi && lanchede==0){
+          alert("Đã hết giờ làm bài. Nút nộp bài sẽ tự động kích hoạt.");
+          check();
+          chedethi();
+          lanchede=1;
+          document.getElementById("thongBao").innerHTML='<span style="color:red;">Cuộc thi đã kết thúc</span>';
+      }
+  },1000);
+</script>
+
+<script>
+  function hiendethi(){
+    for (let element of document.getElementsByClassName("f-grid")){
+      element.style.visibility='visible';
+    }
+    for (let element of document.getElementsByClassName("clchoi")){
+      element.style.visibility='visible';
+    }
+    for (let element of document.getElementsByClassName("btn")){
+      element.style.visibility='visible';
+    }
+  }
+</script>
+<script>//tu  dong che khi load trang
+function chedethi(){
+  for (let element of document.getElementsByClassName("f-grid")){
+    element.style.visibility='hidden';
+  }
+  for (let element of document.getElementsByClassName("clchoi")){
+    element.style.visibility='hidden';
+  }
+  for (let element of document.getElementsByClassName("btn")){
+    element.style.visibility='hidden';
+  }
+}
+chedethi();
+</script>
+<div class="footer">
+  <p>Chú ý rằng trước khi ấn nút nộp bài, bạn phải ghi đầy đủ họ tên và lớp.</p> 
+  <p>Sau khi ấn nút thì đề thi đóng lại và sẽ hiển thị 2 thông báo kết quả.</p>
+</div>
+
+</body>
+</html>
+
